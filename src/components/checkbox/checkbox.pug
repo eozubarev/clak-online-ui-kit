@@ -1,0 +1,5 @@
+mixin checkbox(item)
+  label.checkbox
+    input(class="checkbox__input" type="checkbox" name="privacy" checked)
+    span.checkbox__element
+    a(class="checkbox__text link" href="./docs/privacy-policy.pdf" target="_blanc")= item.text

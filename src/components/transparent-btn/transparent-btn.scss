@@ -1,0 +1,22 @@
+.transparent__btn {
+    font-size: 13px;
+    color: $black;
+    border: 1px solid $btn-blue;
+    padding: 10px 20px 10px 20px;
+    border-radius: 4px;
+    text-align: center;
+    transition: $transition;
+    
+    &:hover {
+        color: white;
+        background-color: $btn-blue;
+    }
+    &:focus {
+        color: white;
+        background-color: $btn-blue;
+    }
+    &:active {
+        color: white;
+        background-color: $btn-blue;
+    }
+}

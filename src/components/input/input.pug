@@ -1,0 +1,54 @@
+mixin input(item)
+
+  if item.type == 'fio'
+    label.input.input
+        input(class="input" type="text" name="fio")
+
+  if item.type == 'hours'
+    label.input.input
+        input(class="input" type="text" name="hours")
+
+  if item.type == 'name'
+    label.input.input--name
+      input(class="input__element --name" type="text" name="name")
+      span.input__placeholder= item.placeholder
+      span.input__error-msg= item.errorMsg
+  if item.type == 'phone'
+    label.input.input--phone
+      input(class="input__element --phone" type="text" name="phone")
+      span.input__placeholder= item.placeholder
+      span.input__error-msg= item.errorMsg
+  if item.type == 'email'
+    label.input.input--email
+      input(class="input__element --email" type="text" name="email")
+      span.input__placeholder= item.placeholder
+      span.input__error-msg= item.errorMsg
+  if item.type == 'organization'
+    label.input.input
+      input(class="input__element" type="text" name="organization")
+      span.input__placeholder= item.placeholder
+      span.input__error-msg= item.errorMsg
+  if item.type == 'inn'
+    label.input.input
+      input(class="input__element" type="text" name="inn")
+      span.input__placeholder= item.placeholder
+      span.input__error-msg= item.errorMsg
+
+  if item.type == 'select'
+      include ../select/select
+
+  else if item.type == 'textarea'
+    label.input.--textarea
+      textarea(class="input__element" name="comment")
+      span.input__placeholder= item.placeholder
+      span.input__error-msg Ссылки запрещены
+  else if item.type == 'file'
+    label.input__file.js-inputFile
+      .input__file-start
+        input(type=item.type multiple name="files[]")
+        span.input__file-el.input__file-icon
+        span.input__file-el.input__file-text.link= item.placeholder
+      .input__file-end
+        span.input__file-count.js-inputFileCount
+
+  

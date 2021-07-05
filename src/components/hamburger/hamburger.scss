@@ -1,0 +1,9 @@
+@import '../btn-menu/btn-menu.scss';
+
+.hamburger {
+    display: none;
+    margin-right: -15px;
+    @media(max-width: $tablet) {
+        display: block;
+    }
+}

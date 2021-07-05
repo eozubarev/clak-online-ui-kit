@@ -1,0 +1,164 @@
+// Шрифты
+$roboto: 'Roboto', Arial, sans-serif;
+
+// Цвета
+$error: #ff0000;
+
+$active: #1ba4d9;
+$activeLight: #258c97;
+$active30: rgba(12, 127, 139, .3);
+$active50: rgba(12, 127, 139, .5);
+$border: #ccc;
+
+$white: #fff;
+$white20: rgba(255,255,255,.2);
+$white30: rgba(255,255,255,.3);
+$black: #202020;
+$priceBenefitIcon: #c7dbba;
+
+$tableHead: #e5f3db;
+$tableActive: #eaf2f3;
+
+$grey: #aaa;
+$greyDark: #43515f;
+$greyDark95: rgba(67, 81, 95,.95);
+
+$iconBg: #e4f5e5;
+
+$formBg: #eaf2f3;
+$formPlaceholder: rgba(0,0,0,.44);
+$footerBg: #eaf2f3;
+
+$buttonBgImage: linear-gradient( 0deg, rgba(0,0,0,.1) 0%, rgba(255,255,255,.1) 100%);
+$buttonBgImageHover: linear-gradient( 180deg, rgba(0,0,0,.05) 100%, rgba(255,255,255,.05) 0%);
+
+$titleBg: linear-gradient(45deg, rgb(200,220,184) 0%, rgb(185,208,204) 50%, rgb(200,206,218) 100%);
+
+// Тень
+$shadow: 0 4px 15px rgba(0, 0, 0, .4);
+$shadow2: 0 1px 10px rgba(0, 0, 0, .35);
+
+
+$black: #2a2a2a;
+$blue: #007bb3;
+$error: #ff0000;
+$red: #e74c4c;
+$success: #22a053;
+$activeOrange: #ff8910;
+$aqua: #28c0bc;
+
+// Текст
+$text_gray: #828282;
+$text_grayL: #9ba9bb;
+$text_blue: #1480b9;
+$text_link: #1890d6;
+$text_black: #2a2a2a;
+$text_blend: #728ca5;
+$text_blendDark: #43576a;
+$text_blendLight: #83d1ff;
+$text_default: #0080bc;
+$main_tabs: #939bb0;
+
+// Кнопки
+$btn-blue: #1c8ec3;
+$btn-blue-active: #166f99;
+
+// Граница
+$border_gray: #ecf0f4;
+$border_grayLight: #e6f0f8;
+$border_grayDark: #e7e7e7;
+$border_blue: #1a88bb;
+$border_blueL: #1da8db;
+$border_blueL2: #1b9bca;
+$border_blend: #364b5e;
+$border_orange: #fe8712;
+
+// Фон
+$bg_blue: #007bb3;
+$bg_blue2: #0083bc;
+$bg-blueDark: #016aa5;
+$bg_gray: #f2f4f7;
+$bg_grayDark: #e1e4e8;
+$bg_grayLight: #fafafa;
+$bg_grayAqua: #b4c5d3;
+$bg_grayStar: #d5dde7;
+$bg_aqua: #29ccc8;
+
+// Элементы
+$close: #9b9b9b;
+
+$text_placeholder: $text_grayL;
+$text_checkboxText: $text_grayL;
+
+$product_cartIcon: #39aedd;
+$product_type: $text_grayL;
+$product_priceOld: $text_grayL;
+
+$preloader: $text_link;
+
+$slider_scroll: #dde3eb;
+$slider_scrollA: #22acdd;
+$slider_scrollBar: #22acdd;
+$slider_arrow: #b2bdcc;
+$slider_arrowA: #22acdd;
+
+$border_arrow: #b2bdcc;
+$border_heroTab: #e5e9f0;
+$border_checkbox: #b6c6d4;
+$border_checkboxA: #1da8db;
+$border_inputV: #b6c6d4;
+$border_cart: #e7f0f8;
+$border_cartH: $border_inputV;
+$border_benefits: #e6f0f8;
+
+$bg_button: $bg_blue;
+$bg_buttonH: $bg_blue2;
+$bg_buttonOrange: $activeOrange;
+$bg_buttonOrangeH: #f86a26;
+$bg_buttonAqua: #28c0bc;
+$bg_footer: #1b2c3e;
+$bg_footerDark: #172534;
+$bg_banner: #007bb3;
+$bg_tonningHeroTab: #cce1ed;
+
+$form_slider: #f0f1f3;
+$form_sliderShadow: 0px 10px 20px 0px rgba(77, 80, 85, 0.2);
+$form-step: #43ABD0;
+$form-step-active: #64C5E6;
+
+// Адаптив
+$desktopWide: 1601px;
+$desktop: 1600px;
+$desktopSmall: 1279px;
+$notebook: 1023px;
+$tabletWide: 900px;
+$tablet: 767px;
+$phone: 479px;
+$phoneSmall: 400px;
+
+// Отступы у блока с продуктами
+$productsOffsetArrows: 33px;
+
+// Градиент
+$gradient_aqua: linear-gradient(0deg, #1aa1d7 0%, #24addd 100%);
+$gradient_orange: linear-gradient(0deg, #f86a26 0%, #ff8910 100%);
+$gradient_blue_count: linear-gradient(0deg, #1fa3d8 0%, #28afde 100%);
+
+// Тени
+$shadow: 0px 10px 20px 0px rgba(63, 126, 202, 0.15);
+$shadow2: 0px 10px 40px 0px rgba(63, 126, 202, 0.15);
+$shadow3: 0px 10px 20px 0px rgba(63, 126, 202, 0.2);
+$shadowInner: inset 0px 0px 5px 10px rgba(242, 244, 247, 0.5);
+
+// Анимация
+$transition: 0.3s ease;
+$transitionMid: 0.5s ease;
+$transitionLong: 0.7s ease;
+
+// Расширения
+%absoluteCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

@@ -1,0 +1,105 @@
+.form {
+    &__select {
+        position: relative;
+        & + &, & + .form__label {
+            margin-top: 18px;
+        }
+        &.--active {
+            & .form__select-head:after {
+                transform: translateY(-50%) rotate3d(0,0,1,-45deg);
+            }
+            & .form__select-list {
+                opacity: 1;
+                transform: none;
+                pointer-events: unset;
+            }
+        }
+        &.--selected {
+            & .form__select-head {
+                color: $black;
+                border-color: $border;
+                background-color: white;
+            }
+        }
+        &-input {
+            position: relative;
+            display: block;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        &-head {
+            display: block;
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+            padding: 14px 0px 17px 25px;       
+            font-size: 16px;
+            line-height: 18px;
+            color: $text_grayL;
+            border-radius: 4px;
+            border: 1px solid $border;
+            background-color: $white;
+            transition: border-color $transition,background-color $transition;
+            cursor: text;
+            @media(max-width: 767px) {
+                
+            }
+            &::after {
+                content: '';
+                display: block;
+                width: 10px;
+                height: 10px;
+                position: absolute;
+                top: 50%;
+                right: 0;
+                z-index: 999;
+                margin-right: 20px;
+                border-top: 1px solid #b2bdcc;
+                border-right: 1px solid #b2bdcc;
+    
+                -webkit-transform: translateY(-50%) rotate3d(0, 0, 1, 135deg);
+                transform: translateY(-50%) rotate3d(0, 0, 1, 135deg);
+                -webkit-transition: -webkit-transform 0.3s ease;
+                transition: -webkit-transform 0.3s ease;
+                transition: transform 0.3s ease;
+                transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+                will-change: transform;
+            }
+        }
+        &-list {
+            overflow: hidden;
+            position: absolute;
+            width: 100%;
+            max-width: 100%;
+            font-size: 16px;
+            line-height: 18px;
+            color: $text_black;
+            border: 1px solid $border;
+            border-radius: 4px;
+            background-color: #fff;
+            opacity: 0;
+            transform: translate3d(0,20px,0);
+            transition: transform $transition,opacity $transition;
+            box-shadow: $shadow;
+            will-change: opacity,transform;
+            pointer-events: none;
+            cursor: pointer;
+            z-index: 10;
+        }
+        &-item {
+            word-wrap: break-word;
+            font-size: 15px;
+            font-weight: 400;
+            letter-spacing: 0;
+            color: #333;
+
+            padding: 14px 0px 17px 25px;       
+            border-top: 1px solid $bg_gray;
+            transition: background-color $transition;
+            &:hover {
+                background-color: $bg_gray;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,17 @@
+.btn {
+    background-color: $btn-blue;
+    padding: 15px 25px 15px 25px;
+    border-radius: 4px;
+    width: 150px;
+    transition: $transition;
+    text-align: center;
+    &:hover {
+        background-color: $btn-blue-active;
+    }
+    &:focus {
+        background-color: $btn-blue-active;
+    }
+    &:active {
+        background-color: $btn-blue-active;
+    }
+}

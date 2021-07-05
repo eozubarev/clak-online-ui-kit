@@ -1,0 +1,51 @@
+.search {
+  &__form {
+    position: relative;
+  }
+  &__loop {
+    &-icon {
+      width: 15px;
+      fill: #939bb0;
+      transition: $transition;
+      &:hover {
+        fill: $btn-blue;
+      }
+    }
+  }
+  &__title {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    color: #939bb0;
+    &::before {
+      width: 1px;
+      height: 20px;
+      content: '';
+      position: absolute;
+      top: 1px;
+      left: 62px;
+      z-index: 1;
+      background-color: #939bb0;
+    }
+  }
+  & input {
+    width: 400px;
+    height: 42px;
+    padding-right: 40px;
+    padding-left: 100px;
+    border: 1px solid #e0e0e7;
+    border-radius: 5px;
+    outline: none;
+    color: #464a54;
+  }
+  & button {
+    position: absolute; 
+    top: 0;
+    right: 0px;
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+  }
+}

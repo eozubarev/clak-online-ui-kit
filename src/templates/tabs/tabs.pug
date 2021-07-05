@@ -1,0 +1,10 @@
+.tab 
+    .tab__container.container
+        .nav-tabs
+            a.nav-tab.active(href='#', data-tab='valves') Клапаны
+            a.nav-tab(href='#', data-tab='users') Пользователи
+        .tab-content
+            .tab-pane.valves.active(data-tab-content='valves')
+                include ./valves/valves
+            .tab-pane(data-tab-content='users')
+                | Tab content 2

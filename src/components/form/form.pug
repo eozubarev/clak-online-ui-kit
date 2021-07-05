@@ -1,0 +1,87 @@
+mixin form(form)
+    .form&attributes(attributes)
+        .container
+            .form__container
+                form(action='send.php' enctype="multipart/form-data" method="post")
+
+                    input(type="hidden" name="form" value=form.name)
+                    input(type="hidden" name="subject" value=form.title)
+                    input(type="hidden" name="location" value=form.url)
+
+                    if form.title
+                        .form__title.title!= form.title
+                    .form__row
+                        ul.form__block
+
+                            li.form__input.none
+                                +input({type: 'fio', placeholder: 'Captcha'})
+
+                            li.form__input
+                                +input({type: 'name', placeholder: 'Имя', errorMsg: 'Напишите имя'})
+                            li.form__input
+                                +input({type: 'phone', placeholder: 'Телефон', errorMsg: 'Напишите телефон'})
+                            li.form__input
+                                +input({type: 'email', placeholder: 'E-mail', errorMsg: 'Некорректный e-mail'})
+                        if form.full
+                            ul.form__block
+
+                                li.form__input.none
+                                    +input({type: 'hours', placeholder: 'Captcha'})
+
+                                li.form__input
+                                    +input({type: 'organization', placeholder: 'Название организации', errorMsg: ''})
+                                li.form__input
+                                    +input({type: 'inn', placeholder: 'ИНН', errorMsg: ''})
+                                li.form__input
+                                    +input({type: 'select', placeholder: 'Тема обращения', errorMsg: ''})
+                    .form__textarea
+                        +input({type: 'textarea', placeholder: 'Комментарии'})
+                    .form__row
+                        .form__block-license.--links
+                            .form__checkbox
+                                +checkbox({text: 'Я принимаю условия передачи информации'})
+                            if form.file || form.full
+                                .form__file
+                                    +input({type: 'file', placeholder: 'Нажмите чтобы добавить файлы к письму'})
+                    .form__block.--submit
+                        button(class="form__button button" type="submit")= form.button
+                .form__thanks
+                    .form__thanks-title Спасибо за Ваше обращение!
+                    p.form__thanks-description
+                        | Мы свяжемся с&nbsp;Вами в&nbsp;ближайшее время.
+
+mixin form_test(form)
+    .form&attributes(attributes)
+        .container
+            .form__container
+                form(action='send_test.php' enctype="multipart/form-data" method="post")
+                    input(type="hidden" name="form" value=form.name)
+                    input(type="hidden" name="ymName" value=form.idTarget)
+                    input(type="hidden" name="location" value)
+                    if form.title
+                        .form__title.title!= form.title
+                    .form__row
+                        ul.form__block
+                            li.form__input
+                                +input({type: 'name', placeholder: 'Ваше имя', errorMsg: 'Напишите имя'})
+                            li.form__input
+                                +input({type: 'phone', placeholder: 'Номер телефона', errorMsg: 'Напишите телефон'})
+                        if form.full
+                            .form__block
+                                .form__textarea
+                                    +input({type: 'textarea', placeholder: 'Комментарии'})
+                    .form__row
+                        .form__block.--links
+                            .form__checkbox
+                                +checkbox({text: 'Я принимаю условия передачи информации'})
+                            if form.file || form.full
+                                .form__file
+                                    +input({type: 'file', placeholder: 'Нажмите чтобы добавить файлы к письму'})
+                        .form__block.--submit
+                            button(class="form__button button" type="submit")= form.button
+                .form__thanks
+                    .form__thanks-title Спасибо за Ваше обращение!
+                    p.form__thanks-description
+                        | Мы свяжемся с&nbsp;Вами в&nbsp;ближайшее время.
+
+

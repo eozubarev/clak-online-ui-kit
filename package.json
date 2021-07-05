@@ -1,0 +1,24 @@
+{
+  "name": "clack-online-personal-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel serve src/index.pug",
+    "build": "parcel build src/index.pug --public-url ./",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.12.13",
+    "parcel": "^2.0.0-beta.1",
+    "parcel-bundler": "^1.12.4",
+    "pug": "^3.0.0",
+    "sass": "^1.32.0"
+  },
+  "browserslist": [
+    "last 1 chrome version"
+  ]
+}

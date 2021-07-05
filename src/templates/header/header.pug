@@ -1,0 +1,15 @@
+header.header
+    .header__container.container
+        .header__start 
+            a(href="tel:+88007756702" class="header__start-tel") 8 (800) 775 67 02
+            p.header__start-subtitle Руководство пользователя
+        .header__middle
+            img(src="/images/common/logo.png", alt="Логотип" class="header__logo")
+            p.header__logo-text online
+            include /images/common/line.svg
+            .header__middle-info Управление автоматикой <br> систем очистки воды
+        .header__end
+            .header__end-id 
+                p Ваш ID: 172
+            +button('Выйти')
+        +hamburger

@@ -1,0 +1,40 @@
+.tab {
+    &__container {
+        padding: 40px 20px 40px 20px;
+    }
+    &-pane {
+        display: none;
+        padding: 30px;
+        &.active {
+            display: flex;
+        }
+    }
+}
+.nav {
+    &-tabs {
+        display: flex;
+        align-items: center;
+    }
+    &-tab {
+        cursor: pointer;
+        text-align: center;
+        max-width: 100%;
+        width: 200px;
+        background-color: white;
+        border-radius: 4px;
+        padding: 30px;
+        color: $main_tabs;
+        transition: $transition;
+        &:first-child {
+            margin-right: 20px;
+        }
+        &:hover {
+            color: $text_default;
+            box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.12);
+        }
+        &.active {
+            color: $text_default;
+            box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.12);
+        }
+    }
+}

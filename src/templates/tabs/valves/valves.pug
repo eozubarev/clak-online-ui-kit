@@ -1,0 +1,17 @@
+.valves__container.container 
+    .valvel__top 
+        h1.valves__top-title Список MAC - адресов
+        .valves__top-container 
+            .valves__top-start 
+                .valves__nav-tabs
+                    a.valves__nav-tab.active(href='#', data-tab='all') Все
+                    a.valves__nav-tab(href='#', data-tab='free') Свободные
+            .valves__end
+                .valves__end-container 
+                    include /components/search/search
+                
+        .valves__tab-content
+            .valves__tab-pane.active(data-tab-content='all')
+                include ./valves-table/valves-table
+            .valves__tab-pane(data-tab-content='free')
+                | Tab content Free
