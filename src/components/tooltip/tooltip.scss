@@ -1,31 +1,23 @@
 .tooltip {
-    
-    visibility: hidden;
-    transform: translateY(-90px);
-    opacity: 0;
-    transition: $transition;
-
-    width: 170px;
-    position: absolute;
-    top: 50px;
-    left: 30px;
-    z-index: 3;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding-top: 12px;
+  opacity: 0;
+  transform: translate3d(0, 20px, 0);
+  transition: transform $transition, opacity $transition;
+  will-change: transform;
+  pointer-events: none;
+  z-index: 5;
+  &__content {
+    position: relative;
+    width: 217px;
+    padding: 9px 12px;
+    color: $black;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.5;
     background-color: $white;
-    border-radius: 4px;
-    box-shadow: 0px 6px 27px 0px rgba(0, 0, 0, 0.19);
-    padding: 17px;
-    &.--active {
-        visibility: visible;
-        transform: translateY(0);
-        opacity: 1;
-    }
-    &__link {
-        transition: $transition;
-        & p {
-            margin-bottom: 10px;
-        }
-        &:hover {
-            color: #1C8EC3;
-        }
-    }
+    box-shadow: $shadow;
+  }
 }
