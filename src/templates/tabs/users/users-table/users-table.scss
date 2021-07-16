@@ -1,0 +1,8 @@
+.users-table {
+    &__item {
+        width: calc(100% / 4);
+        & span {
+            text-align: left;
+        }
+    }
+}

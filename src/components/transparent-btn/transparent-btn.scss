@@ -6,6 +6,7 @@
     border-radius: 4px;
     text-align: center;
     transition: $transition;
+    min-width: 110px;
     
     &:hover {
         color: white;
