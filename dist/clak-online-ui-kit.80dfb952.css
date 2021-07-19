@@ -361,6 +361,48 @@ button:active {
     font-size: 14px;
   }
 }
+.tooltip {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  opacity: 0;
+  transform: translate3d(0, -20px, 0);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  will-change: transform;
+  pointer-events: none;
+  z-index: 5;
+}
+.tooltip.--active {
+  pointer-events: visible;
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+.tooltip__content {
+  display: flex;
+  flex-direction: column;
+  border-radius: 3px;
+  width: 217px;
+  padding: 20px 20px;
+  color: #2a2a2a;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: #fff;
+  box-shadow: 0px 5px 35px 0px rgba(63, 126, 202, 0.25);
+}
+.tooltip__link {
+  display: block;
+  cursor: pointer;
+  margin: 0px;
+  transition: 0.3s ease;
+}
+.tooltip__link:first-child {
+  margin-bottom: 5px;
+}
+.tooltip__link:hover {
+  color: #1ba4d9;
+}
+
 .form__select {
   position: relative;
 }
@@ -797,6 +839,7 @@ button:active {
   justify-content: center;
   align-items: center;
   width: calc(100% / 6);
+  position: relative;
 }
 .table__item span {
   color: #363d4d;

@@ -20,5 +20,8 @@
   },
   "browserslist": [
     "last 1 chrome version"
-  ]
+  ],
+  "dependencies": {
+    "@popperjs/core": "^2.9.2"
+  }
 }

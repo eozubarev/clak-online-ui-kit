@@ -1,23 +1,42 @@
 .tooltip {
   position: absolute;
-  top: 100%;
+  top: 50px;
   left: 0;
-  padding-top: 12px;
   opacity: 0;
-  transform: translate3d(0, 20px, 0);
+  transform: translate3d(0, -20px, 0);
   transition: transform $transition, opacity $transition;
   will-change: transform;
   pointer-events: none;
   z-index: 5;
+  &.--active {
+    pointer-events: visible;
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
   &__content {
-    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 3px;
     width: 217px;
-    padding: 9px 12px;
-    color: $black;
-    font-size: 13px;
+    padding: 20px 20px;
+    color: #2a2a2a;
+    font-size: 14px;
     font-weight: 400;
     line-height: 1.5;
-    background-color: $white;
-    box-shadow: $shadow;
+    background-color: #fff;
+    box-shadow: 0px 5px 35px 0px rgba(63, 126, 202, 0.25);
+  }
+  &__link {
+    display: block;
+    cursor: pointer;
+    margin: 0px;
+    transition: $transition;
+    &:first-child {
+      margin-bottom: 5px;
+    }
+    &:hover {
+      color: $active;
+    }
   }
 }

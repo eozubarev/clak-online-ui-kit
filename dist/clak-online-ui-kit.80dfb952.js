@@ -1182,7 +1182,45 @@ class ValvesTabs {
 
 exports.default = ValvesTabs;
 },{}],"js/tooltip.js":[function(require,module,exports) {
+"use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+class Tooltip {
+  constructor() {
+    this.btns = document.querySelectorAll('.transparent__btn-action');
+    this.activeClass = '--active';
+    this.listeners();
+  }
+
+  listeners() {
+    this.btns.forEach(element => {
+      let btn = element;
+      let tooltip = btn.nextSibling;
+      btn.addEventListener('mousedown', () => {
+        this.showTooltip(tooltip);
+      });
+      document.addEventListener('mousedown', event => {
+        let target = event.target;
+        target == btn || tooltip.contains(target) ? false : this.hideTooltip(tooltip);
+      });
+    });
+  }
+
+  showTooltip(tooltip) {
+    tooltip.classList.add(this.activeClass);
+  }
+
+  hideTooltip(tooltip) {
+    tooltip.classList.remove(this.activeClass);
+  }
+
+}
+
+exports.default = Tooltip;
 },{}],"../index.js":[function(require,module,exports) {
 "use strict";
 
@@ -1235,7 +1273,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52745" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56747" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
