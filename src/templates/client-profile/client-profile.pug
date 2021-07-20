@@ -1,0 +1,18 @@
+.client-profile 
+    .client-profile__container 
+        .client-profile__header 
+            .client-profile__header-container
+                include /components/avatar/avatar
+                .client-profile__cv
+                    .client-profile__cv-name 
+                        p Клиент: Василий
+                    .client-profile__cv-mail 
+                        a(href="mailto:yg@ekodar.com") Email: <span>yg@ekodar.com</span>
+                .client-profile__btn 
+                    +button('Все клиенты')
+        .client-profile__comment 
+            .form__block
+                .form__textarea
+                    +input({type: 'textarea', placeholder: 'Ваше комментарии'})
+        .client-profile__save 
+            +transparentBtnProfile('Сохранить')

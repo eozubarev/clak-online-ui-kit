@@ -14,6 +14,9 @@
     &-tabs {
         display: flex;
         align-items: center;
+        @media(max-width: $phone) {
+            justify-content: center;
+        }
     }
     &-tab {
         cursor: pointer;
@@ -25,6 +28,10 @@
         padding: 30px;
         color: $main_tabs;
         transition: $transition;
+        @media(max-width: $phone) {
+            width: 130px;
+            padding: 10px;
+        }
         &:first-child {
             margin-right: 20px;
         }

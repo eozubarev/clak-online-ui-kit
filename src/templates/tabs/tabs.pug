@@ -7,5 +7,16 @@
         include /components/breadcrumbs/breadcrumbs
             .tab-pane.valves.active(data-tab-content='valves')
                 include ./valves/valves
-            .tab-pane.users(data-tab-content='users')
-                include ./users/users
+
+            //- Здесь лежит вложенность таба "Пользователи"
+            //- .tab-pane.users(data-tab-content='users')
+            //-     include ./users/users
+
+            //- Здесь лежит личный кабинет пользователя + настройка и инфа по клапану
+            .tab-pane.users.client-profile__tab(data-tab-content='users')
+                include ../client-profile/client-profile
+            
+            //- Здесь лежит контроллер для клапана
+            .tab-pane.active.users.valve-controller__tab(data-tab-content='users')
+                include ../valve-controller/valve-controller
+            

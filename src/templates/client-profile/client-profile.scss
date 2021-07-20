@@ -1,0 +1,54 @@
+.client-profile {
+    width: 100%;
+    &__container {
+        padding: 30px 10px 10px 10px;
+    }
+    &__header {
+        &-container {
+            display: flex;
+            @media(max-width: $tablet) {
+                flex-direction: column;
+            }
+        }
+    }
+    &__transparent-btn {
+        padding: 15px 25px 15px 25px;
+        width: 150px;
+    }
+    &__cv {
+        margin-right: 40px;
+        @media(max-width: $tablet) {
+            margin-right: 0px;
+            margin-left: 80px;
+            margin-bottom: 15px;
+        }
+        &-name {
+
+        }
+        &-mail {
+            & a {
+                white-space: nowrap;
+            }
+            & span {
+                color: $active;
+                text-decoration: underline;
+                transition: $transition;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    &__btn {
+        @media(max-width: $tablet) {
+            margin-left: 80px;
+        }
+    }
+    &__comment {
+
+    }
+    &__save {
+        display: flex;
+        justify-content: flex-end;
+    }
+}

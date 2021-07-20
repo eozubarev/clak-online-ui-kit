@@ -7,8 +7,8 @@ import ValvesTabs from './src/js/valves-tabs.js';
 import Tooltip from './src/js/tooltip.js';
 
 document.addEventListener( 'DOMContentLoaded', event => {
-    // new Form;
-    // new SelectForm;
+    new Form;
+    new SelectForm;
     new Tabs;
     new ValvesTabs;
     new Tooltip;

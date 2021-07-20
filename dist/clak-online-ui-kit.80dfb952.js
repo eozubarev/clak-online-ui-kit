@@ -1234,18 +1234,18 @@ var _tabs = _interopRequireDefault(require("./src/js/tabs.js"));
 
 var _valvesTabs = _interopRequireDefault(require("./src/js/valves-tabs.js"));
 
-var _tooltip = _interopRequireDefault(require("./src/js/tooltip"));
+var _tooltip = _interopRequireDefault(require("./src/js/tooltip.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 document.addEventListener('DOMContentLoaded', event => {
-  // new Form;
-  // new SelectForm;
+  new _form.default();
+  new _select.default();
   new _tabs.default();
   new _valvesTabs.default();
   new _tooltip.default();
 });
-},{"./src/main.scss":"main.scss","./src/js/form.js":"js/form.js","./src/js/select.js":"js/select.js","./src/js/tabs.js":"js/tabs.js","./src/js/valves-tabs.js":"js/valves-tabs.js","./src/js/tooltip":"js/tooltip.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./src/main.scss":"main.scss","./src/js/form.js":"js/form.js","./src/js/select.js":"js/select.js","./src/js/tabs.js":"js/tabs.js","./src/js/valves-tabs.js":"js/valves-tabs.js","./src/js/tooltip.js":"js/tooltip.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -1273,7 +1273,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56747" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55917" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

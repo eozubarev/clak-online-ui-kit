@@ -37,6 +37,12 @@
     border-radius: 5px;
     outline: none;
     color: #464a54;
+    @media(max-width: $phone) {
+      width: 335px;
+    }
+    @media(max-width: $phoneSmall) {
+      width: 245px;
+    }
   }
   & button {
     position: absolute; 
