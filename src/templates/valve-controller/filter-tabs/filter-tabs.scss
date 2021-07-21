@@ -1,0 +1,31 @@
+@import './customization/customization.scss';
+@import './information/information.scss';
+@import './statistics/statistics.scss';
+@import './flushing/flushing.scss';
+@import './warnings/warnings.scss';
+@import './archive/archive.scss';
+
+.filter-tabs {
+    &__container {
+
+    }
+    &__nav-tab {
+        cursor: pointer;
+        color: $main_tabs;
+        margin-right: 30px;
+        &:last-child {
+            margin-right: 0px;
+        }
+        &.active {
+            color: $black;
+        }
+    }
+    &__tab-pane {
+        width: 100%;
+        display: none;
+        padding-top: 35px;
+        &.active {
+            display: block;
+        }
+    }
+}

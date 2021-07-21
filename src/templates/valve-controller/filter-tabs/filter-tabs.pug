@@ -1,0 +1,23 @@
+.filter-tabs 
+    .filter-tabs__container 
+        .filter-tabs__nav-tabs
+            a.filter-tabs__nav-tab.active(href='#', data-tab='information') Информация
+            a.filter-tabs__nav-tab(href='#', data-tab='statistics') Статистика
+            a.filter-tabs__nav-tab(href='#', data-tab='flushing') Промывка
+            a.filter-tabs__nav-tab(href='#', data-tab='customization') Настройка
+            a.filter-tabs__nav-tab(href='#', data-tab='archive') Архив
+            a.filter-tabs__nav-tab(href='#', data-tab='warnings') Предупреждения
+                
+        .filter-tabs__tab-content
+            .filter-tabs__tab-pane.active(data-tab-content='information')
+                include ./information/information
+            .filter-tabs__tab-pane(data-tab-content='statistics')
+                include ./statistics/statistics
+            .filter-tabs__tab-pane(data-tab-content='flushing')
+                include ./flushing/flushing
+            .filter-tabs__tab-pane(data-tab-content='customization')
+                include ./customization/customization
+            .filter-tabs__tab-pane(data-tab-content='archive')
+                include ./archive/archive
+            .filter-tabs__tab-pane(data-tab-content='warnings')
+                include ./warnings/warnings

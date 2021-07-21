@@ -194,7 +194,234 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./css/fonts.css":"css/fonts.css","/Users/ijenya/Desktop/GIT Clack Online/clak-online-ui-kit/src/images/icons/arrow.svg":[["arrow.51d50719.svg","images/icons/arrow.svg"],"images/icons/arrow.svg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"js/mask.js":[function(require,module,exports) {
+},{"./css/fonts.css":"css/fonts.css","/Users/ijenya/Desktop/GIT Clack Online/clak-online-ui-kit/src/images/icons/arrow.svg":[["arrow.51d50719.svg","images/icons/arrow.svg"],"images/icons/arrow.svg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"js/valve-controller-tabs.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+class ValvesTabs {
+  constructor() {
+    this.init();
+  }
+
+  init() {
+    let tabNavs = document.querySelectorAll(".valve-controller__nav-tab");
+    let tabPanes = document.querySelectorAll(".valve-controller__tab-pane");
+
+    for (let i = 0; i < tabNavs.length; i++) {
+      tabNavs[i].addEventListener("click", function (e) {
+        e.preventDefault();
+        let activeTabAttr = e.target.getAttribute("data-tab");
+
+        for (let j = 0; j < tabNavs.length; j++) {
+          let contentAttr = tabPanes[j].getAttribute("data-tab-content");
+
+          if (activeTabAttr === contentAttr) {
+            tabNavs[j].classList.add("active");
+            tabPanes[j].classList.add("active");
+          } else {
+            tabNavs[j].classList.remove("active");
+            tabPanes[j].classList.remove("active");
+          }
+        }
+      });
+    }
+  }
+
+}
+
+exports.default = ValvesTabs;
+},{}],"js/valves-tabs.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+class ValvesTabs {
+  constructor() {
+    this.init();
+  }
+
+  init() {
+    let tabNavs = document.querySelectorAll(".valves__nav-tab");
+    let tabPanes = document.querySelectorAll(".valves__tab-pane");
+
+    for (let i = 0; i < tabNavs.length; i++) {
+      tabNavs[i].addEventListener("click", function (e) {
+        e.preventDefault();
+        let activeTabAttr = e.target.getAttribute("data-tab");
+
+        for (let j = 0; j < tabNavs.length; j++) {
+          let contentAttr = tabPanes[j].getAttribute("data-tab-content");
+
+          if (activeTabAttr === contentAttr) {
+            tabNavs[j].classList.add("active");
+            tabPanes[j].classList.add("active");
+          } else {
+            tabNavs[j].classList.remove("active");
+            tabPanes[j].classList.remove("active");
+          }
+        }
+      });
+    }
+  }
+
+}
+
+exports.default = ValvesTabs;
+},{}],"js/filter-tabs.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+class FilterTabs {
+  constructor() {
+    this.init();
+  }
+
+  init() {
+    let tabNavs = document.querySelectorAll(".filter-tabs__nav-tab");
+    let tabPanes = document.querySelectorAll(".filter-tabs__tab-pane");
+
+    for (let i = 0; i < tabNavs.length; i++) {
+      tabNavs[i].addEventListener("click", function (e) {
+        e.preventDefault();
+        let activeTabAttr = e.target.getAttribute("data-tab");
+
+        for (let j = 0; j < tabNavs.length; j++) {
+          let contentAttr = tabPanes[j].getAttribute("data-tab-content");
+
+          if (activeTabAttr === contentAttr) {
+            tabNavs[j].classList.add("active");
+            tabPanes[j].classList.add("active");
+          } else {
+            tabNavs[j].classList.remove("active");
+            tabPanes[j].classList.remove("active");
+          }
+        }
+      });
+    }
+  }
+
+}
+
+exports.default = FilterTabs;
+},{}],"js/select.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+class SelectForm {
+  constructor() {
+    this.selectMenus = [...document.querySelectorAll('.form__select')];
+    this.activeClass = '--active';
+    this.selectClass = '--selected';
+    this.hasValue = '--hasValue';
+    this.listeners();
+  }
+
+  listeners() {
+    for (let selectMenu of this.selectMenus) {
+      selectMenu.addEventListener('mousedown', () => {
+        if (!selectMenu.classList.contains(this.activeClass)) {
+          this.removeSelectMenus();
+          this.openSelectMenu(selectMenu);
+        } else {
+          this.hideSelectMenu(selectMenu);
+        }
+      });
+      document.addEventListener('mousedown', event => {
+        let target = event.target;
+        target == selectMenu || selectMenu.contains(target) ? false : this.hideSelectMenu(selectMenu);
+      });
+      let items = selectMenu.querySelectorAll('.form__select-item');
+
+      for (let item of items) {
+        item.addEventListener('mousedown', () => {
+          let value = item.textContent;
+          this.choiceReasonCall(selectMenu, value);
+        });
+      }
+    }
+  }
+
+  removeSelectMenus() {
+    for (let selectMenu of this.selectMenus) {
+      selectMenu.classList.remove(this.activeClass);
+    }
+  }
+
+  openSelectMenu(selectMenu) {
+    selectMenu.classList.add(this.activeClass);
+  }
+
+  hideSelectMenu(selectMenu) {
+    selectMenu.classList.remove(this.activeClass);
+  }
+
+  choiceReasonCall(selectMenu, el) {
+    selectMenu.classList.add(this.selectClass);
+    let input = selectMenu.querySelector('.input__element');
+    input.value = el;
+    let head = selectMenu.querySelector('.form__select-head');
+    head.classList.add(this.hasValue);
+  }
+
+}
+
+exports.default = SelectForm;
+},{}],"js/tooltip.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+class Tooltip {
+  constructor() {
+    this.btns = document.querySelectorAll('.transparent__btn-action');
+    this.activeClass = '--active';
+    this.listeners();
+  }
+
+  listeners() {
+    this.btns.forEach(element => {
+      let btn = element;
+      let tooltip = btn.nextSibling;
+      btn.addEventListener('mousedown', () => {
+        this.showTooltip(tooltip);
+      });
+      document.addEventListener('mousedown', event => {
+        let target = event.target;
+        target == btn || tooltip.contains(target) ? false : this.hideTooltip(tooltip);
+      });
+    });
+  }
+
+  showTooltip(tooltip) {
+    tooltip.classList.add(this.activeClass);
+  }
+
+  hideTooltip(tooltip) {
+    tooltip.classList.remove(this.activeClass);
+  }
+
+}
+
+exports.default = Tooltip;
+},{}],"js/mask.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1034,74 +1261,7 @@ class Form {
 }
 
 exports.default = Form;
-},{"./validation.js":"js/validation.js"}],"js/select.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-class SelectForm {
-  constructor() {
-    this.selectMenus = [...document.querySelectorAll('.form__select')];
-    this.activeClass = '--active';
-    this.selectClass = '--selected';
-    this.hasValue = '--hasValue';
-    this.listeners();
-  }
-
-  listeners() {
-    for (let selectMenu of this.selectMenus) {
-      selectMenu.addEventListener('mousedown', () => {
-        if (!selectMenu.classList.contains(this.activeClass)) {
-          this.removeSelectMenus();
-          this.openSelectMenu(selectMenu);
-        } else {
-          this.hideSelectMenu(selectMenu);
-        }
-      });
-      document.addEventListener('mousedown', event => {
-        let target = event.target;
-        target == selectMenu || selectMenu.contains(target) ? false : this.hideSelectMenu(selectMenu);
-      });
-      let items = selectMenu.querySelectorAll('.form__select-item');
-
-      for (let item of items) {
-        item.addEventListener('mousedown', () => {
-          let value = item.textContent;
-          this.choiceReasonCall(selectMenu, value);
-        });
-      }
-    }
-  }
-
-  removeSelectMenus() {
-    for (let selectMenu of this.selectMenus) {
-      selectMenu.classList.remove(this.activeClass);
-    }
-  }
-
-  openSelectMenu(selectMenu) {
-    selectMenu.classList.add(this.activeClass);
-  }
-
-  hideSelectMenu(selectMenu) {
-    selectMenu.classList.remove(this.activeClass);
-  }
-
-  choiceReasonCall(selectMenu, el) {
-    selectMenu.classList.add(this.selectClass);
-    let input = selectMenu.querySelector('.input__element');
-    input.value = el;
-    let head = selectMenu.querySelector('.form__select-head');
-    head.classList.add(this.hasValue);
-  }
-
-}
-
-exports.default = SelectForm;
-},{}],"js/tabs.js":[function(require,module,exports) {
+},{"./validation.js":"js/validation.js"}],"js/tabs.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1141,111 +1301,37 @@ class Tabs {
 }
 
 exports.default = Tabs;
-},{}],"js/valves-tabs.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-class ValvesTabs {
-  constructor() {
-    this.init();
-  }
-
-  init() {
-    let tabNavs = document.querySelectorAll(".valves__nav-tab");
-    let tabPanes = document.querySelectorAll(".valves__tab-pane");
-
-    for (let i = 0; i < tabNavs.length; i++) {
-      tabNavs[i].addEventListener("click", function (e) {
-        e.preventDefault();
-        let activeTabAttr = e.target.getAttribute("data-tab");
-
-        for (let j = 0; j < tabNavs.length; j++) {
-          let contentAttr = tabPanes[j].getAttribute("data-tab-content");
-
-          if (activeTabAttr === contentAttr) {
-            tabNavs[j].classList.add("active");
-            tabPanes[j].classList.add("active");
-          } else {
-            tabNavs[j].classList.remove("active");
-            tabPanes[j].classList.remove("active");
-          }
-        }
-      });
-    }
-  }
-
-}
-
-exports.default = ValvesTabs;
-},{}],"js/tooltip.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-class Tooltip {
-  constructor() {
-    this.btns = document.querySelectorAll('.transparent__btn-action');
-    this.activeClass = '--active';
-    this.listeners();
-  }
-
-  listeners() {
-    this.btns.forEach(element => {
-      let btn = element;
-      let tooltip = btn.nextSibling;
-      btn.addEventListener('mousedown', () => {
-        this.showTooltip(tooltip);
-      });
-      document.addEventListener('mousedown', event => {
-        let target = event.target;
-        target == btn || tooltip.contains(target) ? false : this.hideTooltip(tooltip);
-      });
-    });
-  }
-
-  showTooltip(tooltip) {
-    tooltip.classList.add(this.activeClass);
-  }
-
-  hideTooltip(tooltip) {
-    tooltip.classList.remove(this.activeClass);
-  }
-
-}
-
-exports.default = Tooltip;
 },{}],"../index.js":[function(require,module,exports) {
 "use strict";
 
 require("./src/main.scss");
 
-var _form = _interopRequireDefault(require("./src/js/form.js"));
-
-var _select = _interopRequireDefault(require("./src/js/select.js"));
-
-var _tabs = _interopRequireDefault(require("./src/js/tabs.js"));
+var _valveControllerTabs = _interopRequireDefault(require("./src/js/valve-controller-tabs.js"));
 
 var _valvesTabs = _interopRequireDefault(require("./src/js/valves-tabs.js"));
 
+var _filterTabs = _interopRequireDefault(require("./src/js/filter-tabs.js"));
+
+var _select = _interopRequireDefault(require("./src/js/select.js"));
+
 var _tooltip = _interopRequireDefault(require("./src/js/tooltip.js"));
+
+var _form = _interopRequireDefault(require("./src/js/form.js"));
+
+var _tabs = _interopRequireDefault(require("./src/js/tabs.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 document.addEventListener('DOMContentLoaded', event => {
-  new _form.default();
-  new _select.default();
-  new _tabs.default();
+  new _valveControllerTabs.default();
   new _valvesTabs.default();
+  new _select.default();
+  new _filterTabs.default();
   new _tooltip.default();
+  new _form.default();
+  new _tabs.default();
 });
-},{"./src/main.scss":"main.scss","./src/js/form.js":"js/form.js","./src/js/select.js":"js/select.js","./src/js/tabs.js":"js/tabs.js","./src/js/valves-tabs.js":"js/valves-tabs.js","./src/js/tooltip.js":"js/tooltip.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./src/main.scss":"main.scss","./src/js/valve-controller-tabs.js":"js/valve-controller-tabs.js","./src/js/valves-tabs.js":"js/valves-tabs.js","./src/js/filter-tabs.js":"js/filter-tabs.js","./src/js/select.js":"js/select.js","./src/js/tooltip.js":"js/tooltip.js","./src/js/form.js":"js/form.js","./src/js/tabs.js":"js/tabs.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -1273,7 +1359,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55917" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50662" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

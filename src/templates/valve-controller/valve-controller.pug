@@ -1,1 +1,19 @@
-p test
+.valve-controller 
+    .valve-controller__container 
+        .valve-controller__tabs-system__first.--active
+            span Система 1
+        .valve-controller__tabs-system__two
+            span Система 2
+    .valve-controller__header-tabs 
+        h2.valve-controller__header-title Состав изделия
+
+        .valve-controller__nav-tabs
+            a.valve-controller__nav-tab.active(href='#', data-tab='filter-1') Фильтр 1
+            a.valve-controller__nav-tab(href='#', data-tab='filter-2') Фильтр 2
+                
+    .valve-controller__tab-content
+        .valve-controller__tab-pane.active(data-tab-content='filter-1')
+            include ./filter-tabs/filter-tabs
+        .valve-controller__tab-pane(data-tab-content='filter-2')
+            2
+

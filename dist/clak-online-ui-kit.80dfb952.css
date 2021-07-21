@@ -1678,8 +1678,127 @@ button:active {
   justify-content: flex-end;
 }
 
-.valve-controller__tab {
-  margin-top: 50px;
+.filter-tabs__nav-tab {
+  cursor: pointer;
+  color: #939bb0;
+  margin-right: 30px;
+}
+.filter-tabs__nav-tab:last-child {
+  margin-right: 0px;
+}
+.filter-tabs__nav-tab.active {
+  color: #2a2a2a;
+}
+.filter-tabs__tab-pane {
+  width: 100%;
+  display: none;
+  padding-top: 35px;
+}
+.filter-tabs__tab-pane.active {
+  display: block;
+}
+
+.valve-controller__title {
+  font-weight: 300;
+  font-size: 30px;
+  margin: 30px 0px 70px;
+}
+.valve-controller__container {
+  position: relative;
+}
+.valve-controller__tabs-system__first, .valve-controller__tabs-system__two {
+  cursor: pointer;
+}
+.valve-controller__tabs-system__first::after, .valve-controller__tabs-system__two::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 160px;
+  height: 50px;
+  border-radius: 3px;
+  background-color: #f6f6f8;
+  transition: 0.3s ease;
+}
+.valve-controller__tabs-system__first.--active span, .valve-controller__tabs-system__two.--active span {
+  color: #2a2a2a;
+}
+.valve-controller__tabs-system__first.--active::after, .valve-controller__tabs-system__two.--active::after {
+  background-color: #fff;
+}
+.valve-controller__tabs-system__first span {
+  color: #939bb0;
+  white-space: nowrap;
+  position: absolute;
+  left: 8px;
+  top: -62px;
+}
+.valve-controller__tabs-system__first::after {
+  top: -75px;
+  left: -30px;
+}
+.valve-controller__tabs-system__two span {
+  color: #939bb0;
+  white-space: nowrap;
+  position: absolute;
+  top: -62px;
+  left: 180px;
+}
+.valve-controller__tabs-system__two::after {
+  top: -75px;
+  left: 140px;
+}
+.valve-controller__header-tabs {
+  display: flex;
+  align-items: center;
+}
+.valve-controller__header-title {
+  margin-right: 40px;
+  font-weight: 300;
+  font-size: 26px;
+}
+.valve-controller__nav-tabs {
+  display: flex;
+  align-items: center;
+}
+.valve-controller__nav-tab {
+  background-color: #ebecf0;
+  color: #939bb0;
+  padding: 12px 25px 12px 25px;
+  border-radius: 4px;
+  width: 140px;
+  transition: 0.3s ease;
+  text-align: center;
+}
+@media (max-width: 479px) {
+  .valve-controller__nav-tab {
+    padding: 10px 15px 10px 15px;
+    width: 120px;
+  }
+}
+.valve-controller__nav-tab:first-child {
+  position: relative;
+  z-index: 1;
+}
+.valve-controller__nav-tab:last-child {
+  position: relative;
+  z-index: 0;
+  margin-left: -6px;
+}
+.valve-controller__nav-tab:hover {
+  color: white;
+  background-color: #1c8ec3;
+}
+.valve-controller__nav-tab.active {
+  color: white;
+  background-color: #1c8ec3;
+}
+.valve-controller__tab-pane {
+  width: 100%;
+  display: none;
+  padding-top: 35px;
+}
+.valve-controller__tab-pane.active {
+  display: block;
 }
 
 /*# sourceMappingURL=/clak-online-ui-kit.80dfb952.css.map */
