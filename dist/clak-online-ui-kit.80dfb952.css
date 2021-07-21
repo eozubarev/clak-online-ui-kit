@@ -1678,15 +1678,42 @@ button:active {
   justify-content: flex-end;
 }
 
+.information__table-item {
+  width: calc(100% / 2);
+}
+.information__table-item span {
+  text-align: left;
+}
+.information__table-row:first-child {
+  font-weight: 400;
+}
+
 .filter-tabs__nav-tab {
+  margin-bottom: 20px;
   cursor: pointer;
   color: #939bb0;
   margin-right: 30px;
+  transition: 0.3s ease;
+  position: relative;
 }
 .filter-tabs__nav-tab:last-child {
   margin-right: 0px;
 }
 .filter-tabs__nav-tab.active {
+  transition: 0.3s ease;
+  color: #2a2a2a;
+}
+.filter-tabs__nav-tab.active::after {
+  background-color: #1c8ec3;
+  position: absolute;
+  content: "";
+  bottom: -25px;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 2px;
+}
+.filter-tabs__nav-tab:hover {
   color: #2a2a2a;
 }
 .filter-tabs__tab-pane {
@@ -1698,6 +1725,9 @@ button:active {
   display: block;
 }
 
+.valve-controller {
+  width: 100%;
+}
 .valve-controller__title {
   font-weight: 300;
   font-size: 30px;

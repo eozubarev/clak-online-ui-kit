@@ -1,0 +1,13 @@
+.information {
+    &__table-item {
+        width: calc(100% / 2);
+        & span {
+            text-align: left;
+        }
+    }
+    &__table-row {
+        &:first-child {
+            font-weight: 400;
+        }
+    }
+}
