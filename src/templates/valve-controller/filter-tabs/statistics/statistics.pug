@@ -1,2 +1,15 @@
-canvas(id="myChart")
-
+.valve-controller__nav-tabs
+    a.valve-controller__nav-tab.active(href='#', data-tab='1-sec') 1 секунда
+    a.valve-controller__nav-tab(href='#', data-tab='5-sec') 5 секунд
+    a.valve-controller__nav-tab(href='#', data-tab='10-sec') 10 секунд
+    a.valve-controller__nav-tab(href='#', data-tab='30-sec') 30 секунд
+                
+.valve-controller__tab-content
+    .valve-controller__tab-pane.active(data-tab-content='1-sec')
+        canvas(id="chart-warer-flow")
+    .valve-controller__tab-pane(data-tab-content='5-sec')
+        5
+    .valve-controller__tab-pane(data-tab-content='10-sec')
+        10
+    .valve-controller__tab-pane(data-tab-content='30-sec')
+        30

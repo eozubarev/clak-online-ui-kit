@@ -11,14 +11,20 @@
         .filter-tabs__tab-content
             .filter-tabs__tab-pane.active(data-tab-content='information')
                 include ./information/information
+
             .filter-tabs__tab-pane(data-tab-content='statistics')
+                h2.filter-tabs__title-item Статистика
                 include ./statistics/statistics
+
             .filter-tabs__tab-pane(data-tab-content='flushing')
                 h2.filter-tabs__title-item Промывка фильтра
                 include ./flushing/flushing
+
             .filter-tabs__tab-pane(data-tab-content='customization')
                 include ./customization/customization
+
             .filter-tabs__tab-pane(data-tab-content='archive')
                 include ./archive/archive
+
             .filter-tabs__tab-pane(data-tab-content='warnings')
                 include ./warnings/warnings
