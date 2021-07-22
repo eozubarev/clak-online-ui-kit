@@ -5,6 +5,7 @@ import ValvesTabs from './src/js/valves-tabs.js';
 import FilterTabs from './src/js/filter-tabs.js';
 import SelectForm from './src/js/select.js';
 import Tooltip from './src/js/tooltip.js';
+import Chart from './src/js/chart.js';
 import Form from './src/js/form.js';
 import Tabs from './src/js/tabs.js';
 
@@ -14,8 +15,7 @@ document.addEventListener( 'DOMContentLoaded', event => {
     new SelectForm;
     new FilterTabs;
     new Tooltip;
+    new Chart;
     new Form;
     new Tabs;
 });
-
-

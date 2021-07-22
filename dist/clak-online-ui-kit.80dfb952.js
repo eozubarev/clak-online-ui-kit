@@ -421,6 +421,24 @@ class Tooltip {
 }
 
 exports.default = Tooltip;
+},{}],"js/chart.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+class Chart {
+  constructor() {
+    this.listeners();
+  }
+
+  listeners() {}
+
+}
+
+exports.default = Chart;
 },{}],"js/mask.js":[function(require,module,exports) {
 "use strict";
 
@@ -1316,6 +1334,8 @@ var _select = _interopRequireDefault(require("./src/js/select.js"));
 
 var _tooltip = _interopRequireDefault(require("./src/js/tooltip.js"));
 
+var _chart = _interopRequireDefault(require("./src/js/chart.js"));
+
 var _form = _interopRequireDefault(require("./src/js/form.js"));
 
 var _tabs = _interopRequireDefault(require("./src/js/tabs.js"));
@@ -1328,10 +1348,11 @@ document.addEventListener('DOMContentLoaded', event => {
   new _select.default();
   new _filterTabs.default();
   new _tooltip.default();
+  new _chart.default();
   new _form.default();
   new _tabs.default();
 });
-},{"./src/main.scss":"main.scss","./src/js/valve-controller-tabs.js":"js/valve-controller-tabs.js","./src/js/valves-tabs.js":"js/valves-tabs.js","./src/js/filter-tabs.js":"js/filter-tabs.js","./src/js/select.js":"js/select.js","./src/js/tooltip.js":"js/tooltip.js","./src/js/form.js":"js/form.js","./src/js/tabs.js":"js/tabs.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./src/main.scss":"main.scss","./src/js/valve-controller-tabs.js":"js/valve-controller-tabs.js","./src/js/valves-tabs.js":"js/valves-tabs.js","./src/js/filter-tabs.js":"js/filter-tabs.js","./src/js/select.js":"js/select.js","./src/js/tooltip.js":"js/tooltip.js","./src/js/chart.js":"js/chart.js","./src/js/form.js":"js/form.js","./src/js/tabs.js":"js/tabs.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -1359,7 +1380,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52019" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59534" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -1688,6 +1688,22 @@ button:active {
   font-weight: 400;
 }
 
+.filter-tabs__nav-tabs {
+  position: relative;
+}
+.filter-tabs__nav-tabs::after {
+  position: absolute;
+  top: 45px;
+  left: 0px;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #e0e0e7;
+}
+.filter-tabs__title-item {
+  margin: 15px 0px 10px;
+  font-weight: 300;
+}
 .filter-tabs__nav-tab {
   margin-bottom: 20px;
   cursor: pointer;
@@ -1699,11 +1715,8 @@ button:active {
 .filter-tabs__nav-tab:last-child {
   margin-right: 0px;
 }
-.filter-tabs__nav-tab.active {
+.filter-tabs__nav-tab::after {
   transition: 0.3s ease;
-  color: #2a2a2a;
-}
-.filter-tabs__nav-tab.active::after {
   background-color: #1c8ec3;
   position: absolute;
   content: "";
@@ -1712,6 +1725,16 @@ button:active {
   z-index: 1;
   width: 100%;
   height: 2px;
+  opacity: 0;
+  transform: translateX(-95px);
+}
+.filter-tabs__nav-tab.active {
+  transition: 0.3s ease;
+  color: #2a2a2a;
+}
+.filter-tabs__nav-tab.active::after {
+  transform: translateX(0px);
+  opacity: 1;
 }
 .filter-tabs__nav-tab:hover {
   color: #2a2a2a;
@@ -1826,6 +1849,7 @@ button:active {
   width: 100%;
   display: none;
   padding-top: 35px;
+  overflow: hidden;
 }
 .valve-controller__tab-pane.active {
   display: block;

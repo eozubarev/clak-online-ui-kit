@@ -114,6 +114,7 @@
         width: 100%;
         display: none;
         padding-top: 35px;
+        overflow: hidden;
         &.active {
             display: block;
         }
