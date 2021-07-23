@@ -1,28 +1,28 @@
 /* Roboto */
 @font-face {
   font-family: 'Roboto';
-  src: url('/Roboto-Light.1d4b9cc7.ttf') format('truetype');
+  src: url('Roboto-Light.1d4b9cc7.ttf') format('truetype');
   font-weight: 100;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Roboto';
-  src: url('/Roboto-Regular.8dab8bad.ttf') format('truetype');
+  src: url('Roboto-Regular.8dab8bad.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Roboto';
-  src: url('/Roboto-Medium.7e19ad06.ttf') format('truetype');
+  src: url('Roboto-Medium.7e19ad06.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Roboto';
-  src: url('/Roboto-Bold.335e2e5e.ttf') format('truetype');
+  src: url('Roboto-Bold.335e2e5e.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
 }
@@ -31,7 +31,7 @@
 
 @font-face {
   font-family: 'SebastianBold';
-  src: url('/SebastianBold.b58fd8e6.ttf') format('truetype');
+  src: url('SebastianBold.b58fd8e6.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
 }
