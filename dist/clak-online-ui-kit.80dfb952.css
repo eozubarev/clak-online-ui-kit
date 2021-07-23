@@ -1416,6 +1416,19 @@ button:active {
   background-color: #166f99;
 }
 
+.chart__container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.chart__left {
+  width: 60%;
+}
+.chart__right {
+  width: 30%;
+}
+
 .header {
   background-color: #fff;
 }
@@ -1686,6 +1699,52 @@ button:active {
 }
 .information__table-row:first-child {
   font-weight: 400;
+}
+
+.statistics__nav-tabs {
+  display: flex;
+  align-items: center;
+}
+.statistics__nav-tab {
+  background-color: #ebecf0;
+  color: #939bb0;
+  padding: 12px 25px 12px 25px;
+  border-radius: 4px;
+  width: 140px;
+  transition: 0.3s ease;
+  text-align: center;
+}
+@media (max-width: 479px) {
+  .statistics__nav-tab {
+    padding: 10px 15px 10px 15px;
+    width: 120px;
+  }
+}
+.statistics__nav-tab:first-child {
+  position: relative;
+  z-index: 1;
+}
+.statistics__nav-tab:last-child {
+  position: relative;
+  z-index: 0;
+  margin-left: -6px;
+}
+.statistics__nav-tab:hover {
+  color: white;
+  background-color: #1c8ec3;
+}
+.statistics__nav-tab.active {
+  color: white;
+  background-color: #1c8ec3;
+}
+.statistics__tab-pane {
+  width: 100%;
+  display: none;
+  padding-top: 35px;
+  overflow: hidden;
+}
+.statistics__tab-pane.active {
+  display: block;
 }
 
 .filter-tabs__nav-tabs {

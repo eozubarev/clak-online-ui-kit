@@ -1,3 +1,47 @@
 .statistics {
-
+     &__nav {
+        &-tabs {
+            display: flex;
+            align-items: center;
+        }
+        &-tab {
+            background-color: #ebecf0;
+            color: #939bb0;
+            padding: 12px 25px 12px 25px;
+            border-radius: 4px;
+            width: 140px;
+            transition: $transition;
+            text-align: center;
+            @media(max-width: $phone) {
+                padding: 10px 15px 10px 15px;
+                width: 120px;
+            }
+            &:first-child {
+                position: relative;
+                z-index: 1;
+            }
+            &:last-child {
+                position: relative;
+                z-index: 0;
+                margin-left: -6px;
+            }
+            &:hover {
+                color: white;
+                background-color: $btn-blue;
+            }
+            &.active {
+                color: white;
+                background-color: $btn-blue;
+            }
+        }
+    }
+    &__tab-pane {
+        width: 100%;
+        display: none;
+        padding-top: 35px;
+        overflow: hidden;
+        &.active {
+            display: block;
+        }
+    }
 }

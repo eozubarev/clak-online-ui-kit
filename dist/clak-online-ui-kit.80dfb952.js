@@ -11431,6 +11431,122 @@ class ValvesTabs {
 }
 
 exports.default = ValvesTabs;
+},{}],"js/chart-water-flow.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+class ChartWaterFlow {
+  constructor() {
+    this.chart = document.getElementById("chart-warer-flow");
+    this.init();
+  }
+
+  init() {
+    new Chart(this.chart, {
+      type: 'line',
+      data: {
+        labels: ['14:04:34', '14:06:28', '14:08:22', '14:10:16', '14:12:10'],
+        datasets: [{
+          tension: 0.3,
+          label: 'Расход воды, л/мин',
+          data: [20, 20, 18, 19, 17, 3],
+          backgroundColor: ['#1C8EC3'],
+          borderColor: ['#1C8EC3'],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true
+            }
+          }]
+        }
+      }
+    });
+  }
+
+}
+
+exports.default = ChartWaterFlow;
+},{}],"js/chart-resource.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+class ChartResource {
+  constructor() {
+    this.chart = document.getElementById("chart-resource");
+    this.init();
+  }
+
+  init() {
+    new Chart(this.chart, {
+      type: 'doughnut',
+      data: {
+        labels: ['Оставшийся ресурс (%)', 'Весь ресурс (%)'],
+        datasets: [{
+          tension: 0.3,
+          label: 'Оставшийся ресурс',
+          data: [20, 80],
+          backgroundColor: ['#1C8EC3', '#EBECF0'],
+          hoverOffset: 4
+        }]
+      }
+    });
+  }
+
+}
+
+exports.default = ChartResource;
+},{}],"js/statistics-tabs.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+class StatisticsTabs {
+  constructor() {
+    this.init();
+  }
+
+  init() {
+    let tabNavs = document.querySelectorAll(".statistics__nav-tab");
+    let tabPanes = document.querySelectorAll(".statistics__tab-pane");
+
+    for (let i = 0; i < tabNavs.length; i++) {
+      tabNavs[i].addEventListener("click", function (e) {
+        e.preventDefault();
+        let activeTabAttr = e.target.getAttribute("data-tab");
+
+        for (let j = 0; j < tabNavs.length; j++) {
+          let contentAttr = tabPanes[j].getAttribute("data-tab-content");
+
+          if (activeTabAttr === contentAttr) {
+            tabNavs[j].classList.add("active");
+            tabPanes[j].classList.add("active");
+          } else {
+            tabNavs[j].classList.remove("active");
+            tabPanes[j].classList.remove("active");
+          }
+        }
+      });
+    }
+  }
+
+}
+
+exports.default = StatisticsTabs;
 },{}],"js/valves-tabs.js":[function(require,module,exports) {
 "use strict";
 
@@ -12507,6 +12623,12 @@ require("./src/js/chart.js");
 
 var _valveControllerTabs = _interopRequireDefault(require("./src/js/valve-controller-tabs.js"));
 
+var _chartWaterFlow = _interopRequireDefault(require("./src/js/chart-water-flow.js"));
+
+var _chartResource = _interopRequireDefault(require("./src/js/chart-resource.js"));
+
+var _statisticsTabs = _interopRequireDefault(require("./src/js/statistics-tabs.js"));
+
 var _valvesTabs = _interopRequireDefault(require("./src/js/valves-tabs.js"));
 
 var _filterTabs = _interopRequireDefault(require("./src/js/filter-tabs.js"));
@@ -12522,8 +12644,10 @@ var _tabs = _interopRequireDefault(require("./src/js/tabs.js"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 document.addEventListener('DOMContentLoaded', event => {
-  new Chart(document.getElementById('chart-warer-flow'), config);
   new _valveControllerTabs.default();
+  new _chartWaterFlow.default();
+  new _chartResource.default();
+  new _statisticsTabs.default();
   new _valvesTabs.default();
   new _select.default();
   new _filterTabs.default();
@@ -12531,22 +12655,7 @@ document.addEventListener('DOMContentLoaded', event => {
   new _form.default();
   new _tabs.default();
 });
-const labels = ['January', 'February', 'March', 'April', 'May', 'June'];
-const data = {
-  labels: labels,
-  datasets: [{
-    label: 'My dataset',
-    backgroundColor: 'rgb(255, 99, 132)',
-    borderColor: 'rgb(255, 99, 132)',
-    data: [0, 10, 5, 2, 20, 30, 45]
-  }]
-};
-const config = {
-  type: 'line',
-  data,
-  options: {}
-};
-},{"./src/main.scss":"main.scss","./src/js/chart.js":"js/chart.js","./src/js/valve-controller-tabs.js":"js/valve-controller-tabs.js","./src/js/valves-tabs.js":"js/valves-tabs.js","./src/js/filter-tabs.js":"js/filter-tabs.js","./src/js/select.js":"js/select.js","./src/js/tooltip.js":"js/tooltip.js","./src/js/form.js":"js/form.js","./src/js/tabs.js":"js/tabs.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./src/main.scss":"main.scss","./src/js/chart.js":"js/chart.js","./src/js/valve-controller-tabs.js":"js/valve-controller-tabs.js","./src/js/chart-water-flow.js":"js/chart-water-flow.js","./src/js/chart-resource.js":"js/chart-resource.js","./src/js/statistics-tabs.js":"js/statistics-tabs.js","./src/js/valves-tabs.js":"js/valves-tabs.js","./src/js/filter-tabs.js":"js/filter-tabs.js","./src/js/select.js":"js/select.js","./src/js/tooltip.js":"js/tooltip.js","./src/js/form.js":"js/form.js","./src/js/tabs.js":"js/tabs.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -12574,7 +12683,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64789" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49483" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
