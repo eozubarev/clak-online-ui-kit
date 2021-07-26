@@ -11431,6 +11431,49 @@ class ValvesTabs {
 }
 
 exports.default = ValvesTabs;
+},{}],"js/chart-waterflow-metr.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+class ChartWaterFlowMetr {
+  constructor() {
+    this.chart = document.getElementById("chart-warerflow-metr");
+    this.init();
+  }
+
+  init() {
+    new Chart(this.chart, {
+      type: 'line',
+      data: {
+        labels: ['28:04:20', '30:04:20', '05:05:20', '10:05:20', '15:15:20'],
+        datasets: [{
+          tension: 0.3,
+          label: 'Расход воды, м3',
+          data: [0, 21, 2, 28, 10, 28],
+          backgroundColor: ['#1C8EC3'],
+          borderColor: ['#1C8EC3'],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true
+            }
+          }]
+        }
+      }
+    });
+  }
+
+}
+
+exports.default = ChartWaterFlowMetr;
 },{}],"js/chart-water-flow.js":[function(require,module,exports) {
 "use strict";
 
@@ -11507,6 +11550,49 @@ class ChartResource {
 }
 
 exports.default = ChartResource;
+},{}],"js/chart-reagent.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+class ChartReagent {
+  constructor() {
+    this.chart = document.getElementById("chart-reagent");
+    this.init();
+  }
+
+  init() {
+    new Chart(this.chart, {
+      type: 'line',
+      data: {
+        labels: ['14:04:34', '14:06:28', '14:08:22', '14:10:16', '14:12:10'],
+        datasets: [{
+          tension: 0.3,
+          label: 'Расход реагента, кг',
+          data: [0, 0, 0, 0, 0, 0],
+          backgroundColor: ['#1C8EC3'],
+          borderColor: ['#1C8EC3'],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true
+            }
+          }]
+        }
+      }
+    });
+  }
+
+}
+
+exports.default = ChartReagent;
 },{}],"js/statistics-tabs.js":[function(require,module,exports) {
 "use strict";
 
@@ -12623,9 +12709,13 @@ require("./src/js/chart.js");
 
 var _valveControllerTabs = _interopRequireDefault(require("./src/js/valve-controller-tabs.js"));
 
+var _chartWaterflowMetr = _interopRequireDefault(require("./src/js/chart-waterflow-metr.js"));
+
 var _chartWaterFlow = _interopRequireDefault(require("./src/js/chart-water-flow.js"));
 
 var _chartResource = _interopRequireDefault(require("./src/js/chart-resource.js"));
+
+var _chartReagent = _interopRequireDefault(require("./src/js/chart-reagent.js"));
 
 var _statisticsTabs = _interopRequireDefault(require("./src/js/statistics-tabs.js"));
 
@@ -12645,8 +12735,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 document.addEventListener('DOMContentLoaded', event => {
   new _valveControllerTabs.default();
+  new _chartWaterflowMetr.default();
   new _chartWaterFlow.default();
   new _chartResource.default();
+  new _chartReagent.default();
   new _statisticsTabs.default();
   new _valvesTabs.default();
   new _select.default();
@@ -12655,7 +12747,7 @@ document.addEventListener('DOMContentLoaded', event => {
   new _form.default();
   new _tabs.default();
 });
-},{"./src/main.scss":"main.scss","./src/js/chart.js":"js/chart.js","./src/js/valve-controller-tabs.js":"js/valve-controller-tabs.js","./src/js/chart-water-flow.js":"js/chart-water-flow.js","./src/js/chart-resource.js":"js/chart-resource.js","./src/js/statistics-tabs.js":"js/statistics-tabs.js","./src/js/valves-tabs.js":"js/valves-tabs.js","./src/js/filter-tabs.js":"js/filter-tabs.js","./src/js/select.js":"js/select.js","./src/js/tooltip.js":"js/tooltip.js","./src/js/form.js":"js/form.js","./src/js/tabs.js":"js/tabs.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./src/main.scss":"main.scss","./src/js/chart.js":"js/chart.js","./src/js/valve-controller-tabs.js":"js/valve-controller-tabs.js","./src/js/chart-waterflow-metr.js":"js/chart-waterflow-metr.js","./src/js/chart-water-flow.js":"js/chart-water-flow.js","./src/js/chart-resource.js":"js/chart-resource.js","./src/js/chart-reagent.js":"js/chart-reagent.js","./src/js/statistics-tabs.js":"js/statistics-tabs.js","./src/js/valves-tabs.js":"js/valves-tabs.js","./src/js/filter-tabs.js":"js/filter-tabs.js","./src/js/select.js":"js/select.js","./src/js/tooltip.js":"js/tooltip.js","./src/js/form.js":"js/form.js","./src/js/tabs.js":"js/tabs.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -12683,7 +12775,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50691" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63046" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

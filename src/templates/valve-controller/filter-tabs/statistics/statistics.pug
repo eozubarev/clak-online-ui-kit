@@ -3,14 +3,23 @@
     a.statistics__nav-tab(href='#', data-tab='5-sec') 5 секунд
     a.statistics__nav-tab(href='#', data-tab='10-sec') 10 секунд
     a.statistics__nav-tab(href='#', data-tab='30-sec') 30 секунд
-                
+
 .statistics__tab-content
     .statistics__tab-pane.active(data-tab-content='1-sec')
-        include /components/chart/chart
+        include /components/chart-first/chart-first
+        include /components/chart-second/chart-second
 
     .statistics__tab-pane(data-tab-content='5-sec')
-        5
+        p 5 sec
+        include /components/chart-first/chart-first
+        include /components/chart-second/chart-second
+
     .statistics__tab-pane(data-tab-content='10-sec')
-        10
+        p 10 sec
+        include /components/chart-first/chart-first
+        include /components/chart-second/chart-second
+
     .statistics__tab-pane(data-tab-content='30-sec')
-        30
+        p 30 sec
+        include /components/chart-first/chart-first
+        include /components/chart-second/chart-second
