@@ -1,25 +1,41 @@
-.statistics__nav-tabs
-    a.statistics__nav-tab.active(href='#', data-tab='1-sec') 1 секунда
-    a.statistics__nav-tab(href='#', data-tab='5-sec') 5 секунд
-    a.statistics__nav-tab(href='#', data-tab='10-sec') 10 секунд
-    a.statistics__nav-tab(href='#', data-tab='30-sec') 30 секунд
+h2.statistics__title Интервал обновления
+.interval__nav-tabs
+    a.interval__nav-tab.active(href='#', data-tab='1-sec') 1 секунда
+    a.interval__nav-tab(href='#', data-tab='5-sec') 5 секунд
+    a.interval__nav-tab(href='#', data-tab='10-sec') 10 секунд
+    a.interval__nav-tab(href='#', data-tab='30-sec') 30 секунд
+
+.interval__tab-content
+    .interval__tab-pane.active(data-tab-content='1-sec')
+        include /components/chart-first/chart-first
+
+    .interval__tab-pane(data-tab-content='5-sec')
+        p after 5 sec
+
+    .interval__tab-pane(data-tab-content='10-sec')
+        p after 10 sec
+
+    .interval__tab-pane(data-tab-content='30-sec')
+        p after 30 sec
+
+//- ==============================================================================
+
+h2.statistics__title Статистика
+.statistics__nav-tabs.second
+    a.statistics__nav-tab.active(href='#', data-tab='1-sec') За неделю
+    a.statistics__nav-tab(href='#', data-tab='5-sec') За месяц
+    a.statistics__nav-tab(href='#', data-tab='10-sec') За 3 месяца
+    a.statistics__nav-tab(href='#', data-tab='30-sec') За интервал
 
 .statistics__tab-content
     .statistics__tab-pane.active(data-tab-content='1-sec')
-        include /components/chart-first/chart-first
         include /components/chart-second/chart-second
 
     .statistics__tab-pane(data-tab-content='5-sec')
-        p 5 sec
-        include /components/chart-first/chart-first
-        include /components/chart-second/chart-second
+        p за месяц
 
     .statistics__tab-pane(data-tab-content='10-sec')
-        p 10 sec
-        include /components/chart-first/chart-first
-        include /components/chart-second/chart-second
+        p за 3 месяца
 
     .statistics__tab-pane(data-tab-content='30-sec')
-        p 30 sec
-        include /components/chart-first/chart-first
-        include /components/chart-second/chart-second
+        p за интервал

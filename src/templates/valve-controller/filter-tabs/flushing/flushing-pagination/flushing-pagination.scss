@@ -1,0 +1,31 @@
+.flushing-pagination {
+    &__container {
+        margin-top: 25px;
+        display: flex;
+        align-items: center;
+    }
+    &__btn {
+        background-color: #ebecf0;
+        color: #939bb0;
+        padding: 12px 10px 12px 10px;
+        border-radius: 4px;
+        width: 180px;
+        transition: $transition;
+        text-align: center;
+        &:first-child {
+            margin-right: 10px;
+        }
+        @media (max-width: $phone) {
+            padding: 10px 15px 10px 15px;
+            width: 120px;
+        }
+        &:hover {
+            color: white;
+            background-color: $btn-blue;
+        }
+        &.active {
+            color: white;
+            background-color: $btn-blue;
+        }
+    }
+}

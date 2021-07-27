@@ -16,7 +16,7 @@ export default class ChartResource {
                         '#1C8EC3',
                         '#EBECF0'
                     ],
-                    hoverOffset: 4
+                    hoverOffset: 4,
                 }]
             },
         });

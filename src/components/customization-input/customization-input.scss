@@ -1,0 +1,30 @@
+.customization__info {
+    &-input {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        width: 90%;
+        padding: 20px 0 20px;
+        border-bottom: 1px solid #e0e0e7;
+
+        &__item {
+            text-align: center;
+            width: 110px;
+            max-width: 100%;
+            padding: 7px 0px 7px 0px;
+            border: 1px solid #e0e0e7;
+            border-radius: 6px;
+            cursor: pointer;
+            & p {
+                color: $active;
+            }
+            & input {
+                font-size: 15px;
+                text-align: center;
+                width: 100%;
+                color: $active;
+            }
+        }
+    }
+}

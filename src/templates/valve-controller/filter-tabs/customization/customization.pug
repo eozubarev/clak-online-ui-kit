@@ -1,1 +1,20 @@
-4
+.customization
+    .customization__container 
+        .customization__nav-tabs
+            a.customization__nav-tab.active(href='#', data-tab='general') Общие
+            a.customization__nav-tab(href='#', data-tab='сonfiguration') Конфигурация
+            a.customization__nav-tab(href='#', data-tab='systemSetup') Настройка системы
+            a.customization__nav-tab(href='#', data-tab='installerSetup') Настройка монтажника
+                
+        .customization__tab-content
+            .customization__tab-pane.active(data-tab-content='general')
+                include ./general/general  
+                
+            .customization__tab-pane(data-tab-content='сonfiguration')
+                p Конфигурация
+
+            .customization__tab-pane(data-tab-content='systemSetup')
+                p Настройка системы
+
+            .customization__tab-pane(data-tab-content='installerSetup')
+                p Настройка монтажника

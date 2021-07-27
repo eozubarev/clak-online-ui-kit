@@ -1,8 +1,13 @@
-@import './header/header.scss';
-@import './tabs/tabs.scss';
-@import './tabs/valves/valves.scss';
-@import './tabs/users/users.scss';
-@import './tabs/users/users.scss';
-@import './tabs/users/users-table/users-table.scss';
-@import './templates/client-profile/client-profile.scss';
-@import './templates/valve-controller/valve-controller.scss';
+@import "./header/header.scss";
+@import "./tabs/tabs.scss";
+@import "./tabs/valves/valves.scss";
+@import "./tabs/users/users.scss";
+@import "./tabs/users/users.scss";
+@import "./tabs/users/users-table/users-table.scss";
+@import "./templates/client-profile/client-profile.scss";
+
+@import "./templates/valve-controller/valve-controller.scss";
+@import "./templates/valve-controller/filter-tabs/statistics/statistics-table/statistics-table.scss";
+@import "./templates/valve-controller/filter-tabs/flushing/flushing-pagination/flushing-pagination.scss";
+@import "./templates/valve-controller/filter-tabs/customization/general/customization-info/customization-info.scss";
+@import "./templates/valve-controller/filter-tabs/customization/general/general-pagination/general-pagination.scss";

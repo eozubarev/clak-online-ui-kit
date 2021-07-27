@@ -14,16 +14,17 @@ export default class ChartReagent {
                     '14:10:16',
                     '14:12:10',],
                 datasets: [{
+                    fill: true,
                     tension: 0.3,
                     label: 'Расход реагента, кг',
                     data: [0, 0, 0, 0, 0, 0],
                     backgroundColor: [
-                        '#1C8EC3'
+                        '#1c8ec342'
                     ],
                     borderColor: [
-                        '#1C8EC3'
+                        '#028fc5'
                     ],
-                    borderWidth: 1
+                    borderWidth: 2
                 }]
             },
             options: {

@@ -14,16 +14,17 @@ export default class ChartWaterFlow {
                     '14:10:16',
                     '14:12:10',],
                 datasets: [{
+                    fill: true,
                     tension: 0.3,
                     label: 'Расход воды, л/мин',
                     data: [20, 20, 18, 19, 17, 3],
                     backgroundColor: [
-                        '#1C8EC3'
+                        '#1c8ec342'
                     ],
                     borderColor: [
                         '#1C8EC3'
                     ],
-                    borderWidth: 1
+                    borderWidth: 2
                 }]
             },
             options: {

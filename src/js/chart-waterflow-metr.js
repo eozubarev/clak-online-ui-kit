@@ -14,16 +14,17 @@ export default class ChartWaterFlowMetr {
                     '10:05:20',
                     '15:15:20',],
                 datasets: [{
+                    fill: true,
                     tension: 0.3,
                     label: 'Расход воды, м3',
                     data: [0, 21, 2, 28, 10, 28],
                     backgroundColor: [
-                        '#1C8EC3'
+                        '#1c8ec342'
                     ],
                     borderColor: [
-                        '#1C8EC3'
+                        '#028fc5'
                     ],
-                    borderWidth: 1
+                    borderWidth: 2
                 }]
             },
             options: {
