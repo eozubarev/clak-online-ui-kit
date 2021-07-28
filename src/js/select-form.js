@@ -54,6 +54,7 @@ export default class SelectForm {
         input.value = el;
 
         let head = selectMenu.querySelector('.form__select-head');
+        head.textContent = el;
         head.classList.add(this.hasValue);
     }
 }

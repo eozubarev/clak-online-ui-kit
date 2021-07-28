@@ -11796,7 +11796,7 @@ class FilterTabs {
 }
 
 exports.default = FilterTabs;
-},{}],"js/select.js":[function(require,module,exports) {
+},{}],"js/select-form.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -11857,6 +11857,7 @@ class SelectForm {
     let input = selectMenu.querySelector('.input__element');
     input.value = el;
     let head = selectMenu.querySelector('.form__select-head');
+    head.textContent = el;
     head.classList.add(this.hasValue);
   }
 
@@ -12810,7 +12811,7 @@ var _valvesTabs = _interopRequireDefault(require("./src/js/valves-tabs.js"));
 
 var _filterTabs = _interopRequireDefault(require("./src/js/filter-tabs.js"));
 
-var _select = _interopRequireDefault(require("./src/js/select.js"));
+var _selectForm = _interopRequireDefault(require("./src/js/select-form.js"));
 
 var _tooltip = _interopRequireDefault(require("./src/js/tooltip.js"));
 
@@ -12830,13 +12831,13 @@ document.addEventListener('DOMContentLoaded', event => {
   new _statisticsTabs.default();
   new _intervalTabs.default();
   new _valvesTabs.default();
-  new _select.default();
+  new _selectForm.default();
   new _filterTabs.default();
   new _tooltip.default();
   new _form.default();
   new _tabs.default();
 });
-},{"./src/main.scss":"main.scss","./src/js/chart.js":"js/chart.js","./src/js/valve-controller-tabs.js":"js/valve-controller-tabs.js","./src/js/chart-waterflow-metr.js":"js/chart-waterflow-metr.js","./src/js/chart-water-flow.js":"js/chart-water-flow.js","./src/js/chart-resource.js":"js/chart-resource.js","./src/js/chart-reagent.js":"js/chart-reagent.js","./src/js/customization-tabs.js":"js/customization-tabs.js","./src/js/statistics-tabs.js":"js/statistics-tabs.js","./src/js/interval-tabs.js":"js/interval-tabs.js","./src/js/valves-tabs.js":"js/valves-tabs.js","./src/js/filter-tabs.js":"js/filter-tabs.js","./src/js/select.js":"js/select.js","./src/js/tooltip.js":"js/tooltip.js","./src/js/form.js":"js/form.js","./src/js/tabs.js":"js/tabs.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./src/main.scss":"main.scss","./src/js/chart.js":"js/chart.js","./src/js/valve-controller-tabs.js":"js/valve-controller-tabs.js","./src/js/chart-waterflow-metr.js":"js/chart-waterflow-metr.js","./src/js/chart-water-flow.js":"js/chart-water-flow.js","./src/js/chart-resource.js":"js/chart-resource.js","./src/js/chart-reagent.js":"js/chart-reagent.js","./src/js/customization-tabs.js":"js/customization-tabs.js","./src/js/statistics-tabs.js":"js/statistics-tabs.js","./src/js/interval-tabs.js":"js/interval-tabs.js","./src/js/valves-tabs.js":"js/valves-tabs.js","./src/js/filter-tabs.js":"js/filter-tabs.js","./src/js/select-form.js":"js/select-form.js","./src/js/tooltip.js":"js/tooltip.js","./src/js/form.js":"js/form.js","./src/js/tabs.js":"js/tabs.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -12864,7 +12865,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57889" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58991" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

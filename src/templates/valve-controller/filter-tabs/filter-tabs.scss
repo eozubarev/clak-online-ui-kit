@@ -1,14 +1,14 @@
-@import './customization/customization.scss';
-@import './information/information.scss';
-@import './statistics/statistics.scss';
-@import './flushing/flushing.scss';
-@import './warnings/warnings.scss';
-@import './archive/archive.scss';
+@import "./customization/customization.scss";
+@import "./information/information.scss";
+@import "./statistics/statistics.scss";
+@import "./flushing/flushing.scss";
+@import "./warnings/warnings.scss";
+@import "./archive/archive.scss";
 
 .filter-tabs {
     &__container {
     }
-    &__nav-tabs{
+    &__nav-tabs {
         position: relative;
         &::after {
             position: absolute;
@@ -38,20 +38,20 @@
             transition: $transition;
             background-color: $btn-blue;
             position: absolute;
-            content: '';
+            content: "";
             bottom: -25px;
             left: 0;
             z-index: 1;
             width: 100%;
             height: 2px;
             opacity: 0;
-            transform: translateX(-95px);
+            // transform: translateX(-95px);
         }
         &.active {
             transition: $transition;
             color: $black;
             &::after {
-                transform: translateX(0px);
+                // transform: translateX(0px);
                 opacity: 1;
             }
         }
