@@ -12,10 +12,11 @@ import Tooltip from './src/js/tooltip.js';
 import Form from './src/js/form.js';
 import Tabs from './src/js/tabs.js';
 
+import ChartResource from './src/js/chart-resource.js';
 import ChartWaterFlowMetr from './src/js/chart-waterflow-metr.js';
 import ChartWaterFlow from './src/js/chart-water-flow.js';
-import ChartResource from './src/js/chart-resource.js';
 import ChartReagent from './src/js/chart-reagent.js';
+
 
 document.addEventListener( 'DOMContentLoaded', event => {
     new ValveControllerTabs;
@@ -31,6 +32,7 @@ document.addEventListener( 'DOMContentLoaded', event => {
     new ChartWaterFlowMetr;
     new CustomizationTabs;
     new ChartWaterFlow;
-    new ChartResource;
     new ChartReagent;
+    new ChartResource;
+
 });
