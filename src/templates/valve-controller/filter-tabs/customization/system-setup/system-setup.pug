@@ -1,0 +1,38 @@
+.system-setup 
+    +customizationSelect('Тип системы', 'Умягчение', 'Обезжеливание', 'Комплексные системы', 'Универсальные фильтры', 'Обратный осмос')
+    h2.system-setup__title Стадия промывки
+    .system-setup__container 
+
+        +customizationSelect('Стадия', 'Обратная', 'Обратная')
+        +customizationSelect('Стадия', 'Регенерация', 'Регенерация')
+        +customizationSelect('Стадия', 'Обратная', 'Обратная')
+        +customizationSelect('Стадия', 'Прямая', 'Прямая')
+        +customizationSelect('Стадия', 'Обратная', 'Обратная')
+        +customizationSelect('Стадия', 'Обратная', 'Обратная')
+
+        +customizationInput('Время', '8')
+        +customizationInput('Время', '60')
+        +customizationInput('Время', '8')
+        +customizationInput('Время', '4')
+        +customizationInput('Время', '4.25')
+        +customizationInput('Время', '0')
+
+    .system-setup__btn
+        +transparentBtn('Добавить стадию')
+    
+    .system-setup__container 
+        +customizationInput('Обменная емкость системы', '20')
+        +customizationInput('Ресурс системы (л)', 'Auto')
+        +customizationSelect('Тип промывки', 'Отложенн...', 'Отложенный')
+        +customizationInput('Условия работы релейного выхода 1', '0')
+        +customizationSelect('Настройка режима работы релейного выхода 2', 'Выкл', 'Выкл')
+        +customizationSelect('Время работы релейного выхода 2', '0', '1', '2')
+
+        +customizationSelect('Пропорциональное заполнение бака', 'Выкл', 'Выкл', 'Вкл')
+        +customizationSelect('Режим промывки', '28', '29', '30')
+        +customizationSelect('Настройка режима работы релейного выхода 1', 'Выкл', 'Выкл', 'Вкл')
+        +customizationInput('Время работы релейного выхода 1', '0')
+        +customizationInput('Условия работы релейного выхода 2', '0')
+
+    include ./system-setup-pagination/system-setup-pagination
+

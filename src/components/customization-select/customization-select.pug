@@ -1,0 +1,11 @@
+mixin customizationSelect(title, selectHeadTitle, ...values)
+    .customization__select
+        .customization__select-container
+            p= title
+            .form__wrapper
+            .form__label.form__select
+                input.input__element(type='hidden' name='')
+                .form__select-head= selectHeadTitle
+                ul.form__select-list
+                    each value in values
+                        li.form__select-item= value

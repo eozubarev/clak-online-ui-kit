@@ -1,0 +1,21 @@
+.system-setup__pagination {
+    &-btns {
+        display: flex;
+        margin-right: 35px;
+        & button {
+            width: 180px;
+            &:first-child {
+                margin-right: 25px;
+            }
+        }
+    }
+    &-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 40px 0 40px;
+    }
+    &-warning {
+        font-size: 13px;
+    }
+}
