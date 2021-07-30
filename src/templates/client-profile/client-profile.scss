@@ -1,12 +1,15 @@
 .client-profile {
     width: 100%;
+    &__comment {
+        margin-top: 30px;
+    }
     &__container {
         padding: 30px 10px 10px 10px;
     }
     &__header {
         &-container {
             display: flex;
-            @media(max-width: $tablet) {
+            @media (max-width: $tablet) {
                 flex-direction: column;
             }
         }
@@ -17,13 +20,12 @@
     }
     &__cv {
         margin-right: 40px;
-        @media(max-width: $tablet) {
+        @media (max-width: $tablet) {
             margin-right: 0px;
             margin-left: 80px;
             margin-bottom: 15px;
         }
         &-name {
-
         }
         &-mail {
             & a {
@@ -40,15 +42,15 @@
         }
     }
     &__btn {
-        @media(max-width: $tablet) {
+        @media (max-width: $tablet) {
             margin-left: 80px;
         }
     }
     &__comment {
-
     }
     &__save {
         display: flex;
         justify-content: flex-end;
+        margin-bottom: 25px;
     }
 }

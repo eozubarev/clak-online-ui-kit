@@ -849,8 +849,9 @@ button:active {
   border-color: #1ba4d9;
 }
 .input.--textarea {
-  min-height: 120px;
+  max-height: 120px;
   height: 100%;
+  margin-bottom: 25px;
 }
 .input.--textarea .input__element {
   height: 100%;
@@ -996,8 +997,9 @@ button:active {
   border-color: #1ba4d9;
 }
 .input.--textarea {
-  min-height: 120px;
+  max-height: 120px;
   height: 100%;
+  margin-bottom: 25px;
 }
 .input.--textarea .input__element {
   height: 100%;
@@ -2064,6 +2066,9 @@ button:active {
 .client-profile {
   width: 100%;
 }
+.client-profile__comment {
+  margin-top: 30px;
+}
 .client-profile__container {
   padding: 30px 10px 10px 10px;
 }
@@ -2108,6 +2113,7 @@ button:active {
 .client-profile__save {
   display: flex;
   justify-content: flex-end;
+  margin-bottom: 25px;
 }
 
 .installer-setup__container {

@@ -22,11 +22,11 @@ import Tabs from './src/js/tabs.js';
 
 document.addEventListener( 'DOMContentLoaded', event => {
     new ValveControllerTabs;
-    new ChartWaterFlowMetr;
+    // new ChartWaterFlowMetr;
     new CustomizationTabs;
-    new ChartWaterFlow;
-    new ChartReagent;
-    new ChartResource;
+    // new ChartWaterFlow;
+    // new ChartReagent;
+    // new ChartResource;
     new StatisticsTabs;
     new IntervalTabs;
     new ValvesTabs;
@@ -36,4 +36,22 @@ document.addEventListener( 'DOMContentLoaded', event => {
     new Input;
     new Form;
     new Tabs;
+
+    if (document.getElementById('chart-warer-flow')) {
+        new ChartWaterFlow;
+    }
+
+    if (document.getElementById('chart-reagent')) {
+        new ChartReagent;
+    }
+
+    if (document.getElementById('chart-warerflow-metr')) {
+        new ChartWaterFlowMetr;
+    }
+
+    if (document.getElementById('chart-resource')) {
+        new ChartResource;
+    }
+
 });
+

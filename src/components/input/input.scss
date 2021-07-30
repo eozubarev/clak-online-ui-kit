@@ -11,8 +11,9 @@
         border-color: $active;
     }
     &.--textarea {
-        min-height: 120px;
+        max-height: 120px;
         height: 100%;
+        margin-bottom: 25px;
         & .input__element {
             height: 100%;
             font-family: $roboto;
