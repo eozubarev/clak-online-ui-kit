@@ -1,0 +1,60 @@
+.installer-setup {
+    &__container {
+        margin: 15px 0 40px;
+    }
+    &__btn {
+        margin: 25px 0 25px;
+        & button {
+            padding: 12px 10px 12px 10px;
+            width: 155px;
+        }
+    }
+    &__columns {
+        column-count: 2;
+        @media (max-width: $tablet) {
+            column-count: 1;
+        }
+    }
+    &__nav {
+        &-tabs {
+            display: flex;
+            align-items: center;
+            & button {
+                padding: 15px 25px 15px 25px;
+                width: 180px;
+                font-size: 15px;
+                margin-left: 20px;
+            }
+        }
+        &-tab {
+            background-color: #ebecf0;
+            color: #939bb0;
+            padding: 12px 25px 12px 25px;
+            border-radius: 4px;
+            width: 260px;
+            transition: $transition;
+            text-align: center;
+            @media (max-width: $phone) {
+                padding: 10px 15px 10px 15px;
+                width: 120px;
+            }
+            &:first-child {
+                position: relative;
+                z-index: 1;
+            }
+            &:last-child {
+                position: relative;
+                z-index: 0;
+                margin-left: -6px;
+            }
+            &:hover {
+                color: white;
+                background-color: $btn-blue;
+            }
+            &.active {
+                color: white;
+                background-color: $btn-blue;
+            }
+        }
+    }
+}

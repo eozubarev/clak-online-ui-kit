@@ -173,6 +173,11 @@ button:active {
 .customization__select {
   width: 90%;
 }
+@media (max-width: 767px) {
+  .customization__select {
+    width: 100%;
+  }
+}
 .customization__select-container {
   display: flex;
   align-items: center;
@@ -189,7 +194,13 @@ button:active {
   padding: 20px 0 20px;
   border-bottom: 1px solid #e0e0e7;
 }
+@media (max-width: 767px) {
+  .customization__info-input {
+    width: 100%;
+  }
+}
 .customization__info-input__item {
+  font-size: 15px;
   text-align: center;
   width: 110px;
   max-width: 100%;
@@ -197,6 +208,10 @@ button:active {
   border: 1px solid #e0e0e7;
   border-radius: 6px;
   cursor: pointer;
+  transition: 0.3s ease;
+}
+.customization__info-input__item.--active {
+  border-color: #b6c6d4;
 }
 .customization__info-input__item p {
   color: #1ba4d9;
@@ -897,9 +912,6 @@ button:active {
 .input.--hasError .input__placeholder {
   opacity: 0;
 }
-.input.--focused, .input.--hasValue {
-  border-color: #1ba4d9;
-}
 .input.--focused .input__element, .input.--hasValue .input__element {
   opacity: 1;
 }
@@ -1046,9 +1058,6 @@ button:active {
 }
 .input.--hasError .input__placeholder {
   opacity: 0;
-}
-.input.--focused, .input.--hasValue {
-  border-color: #1ba4d9;
 }
 .input.--focused .input__element, .input.--hasValue .input__element {
   opacity: 1;
@@ -1741,7 +1750,7 @@ button:active {
   text-align: center;
   width: 110px;
   max-width: 100%;
-  padding: 7px 0px 7px 0px;
+  padding: 7px 25px 7px 10px;
   border: 1px solid #e0e0e7;
   border-radius: 6px;
   cursor: pointer;
@@ -1756,13 +1765,23 @@ button:active {
   height: 7px;
   position: absolute;
   top: 50%;
-  right: 0;
+  right: -10px;
   margin-right: 20px;
   border-top: 1px solid #b2bdcc;
   border-right: 1px solid #b2bdcc;
   transform: translateY(-50%) rotate3d(0, 0, 1, 135deg);
   transition: transform 0.3s ease;
   will-change: transform;
+}
+.form__select-head::before {
+  content: "";
+  display: block;
+  width: 22px;
+  height: 14px;
+  position: absolute;
+  background-color: white;
+  top: 36%;
+  right: 1px;
 }
 .form__select-list {
   position: absolute;
@@ -1782,10 +1801,12 @@ button:active {
   pointer-events: none;
   cursor: pointer;
   z-index: 11;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 .form__select-item {
   margin-top: 0px !important;
-  padding: 8px 0px 8px 0px;
+  padding: 12px;
   text-align: center;
   font-size: 15px;
   border-top: 1px solid #f2f4f7;
@@ -2089,12 +2110,85 @@ button:active {
   justify-content: flex-end;
 }
 
+.installer-setup__container {
+  margin: 15px 0 40px;
+}
+.installer-setup__btn {
+  margin: 25px 0 25px;
+}
+.installer-setup__btn button {
+  padding: 12px 10px 12px 10px;
+  width: 155px;
+}
+.installer-setup__columns {
+  column-count: 2;
+}
+@media (max-width: 767px) {
+  .installer-setup__columns {
+    column-count: 1;
+  }
+}
+.installer-setup__nav-tabs {
+  display: flex;
+  align-items: center;
+}
+.installer-setup__nav-tabs button {
+  padding: 15px 25px 15px 25px;
+  width: 180px;
+  font-size: 15px;
+  margin-left: 20px;
+}
+.installer-setup__nav-tab {
+  background-color: #ebecf0;
+  color: #939bb0;
+  padding: 12px 25px 12px 25px;
+  border-radius: 4px;
+  width: 260px;
+  transition: 0.3s ease;
+  text-align: center;
+}
+@media (max-width: 479px) {
+  .installer-setup__nav-tab {
+    padding: 10px 15px 10px 15px;
+    width: 120px;
+  }
+}
+.installer-setup__nav-tab:first-child {
+  position: relative;
+  z-index: 1;
+}
+.installer-setup__nav-tab:last-child {
+  position: relative;
+  z-index: 0;
+  margin-left: -6px;
+}
+.installer-setup__nav-tab:hover {
+  color: white;
+  background-color: #1c8ec3;
+}
+.installer-setup__nav-tab.active {
+  color: white;
+  background-color: #1c8ec3;
+}
+
+.system-setup__types-select {
+  width: 100%;
+}
+.system-setup__types-label, .system-setup__types-head {
+  width: 220px;
+  max-width: 100%;
+}
 .system-setup__title {
   font-weight: 300;
   margin: 30px 0 25px;
 }
 .system-setup__container {
   column-count: 2;
+}
+@media (max-width: 767px) {
+  .system-setup__container {
+    column-count: 1;
+  }
 }
 .system-setup__btn {
   margin: 35px 0 35px;
@@ -2408,6 +2502,11 @@ button:active {
 
 .customization__info-container {
   column-count: 2;
+}
+@media (max-width: 767px) {
+  .customization__info-container {
+    column-count: 1;
+  }
 }
 
 .general-pagination__btns {

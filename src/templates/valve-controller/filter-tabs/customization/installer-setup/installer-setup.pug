@@ -1,0 +1,26 @@
+.installer-setup
+    .installer-setup__container
+        .installer-setup__nav-tabs
+            a.installer-setup__nav-tab.active(href='#', data-tab='filter-1') Блокировка кнопок
+            a.installer-setup__nav-tab(href='#', data-tab='filter-2') Снятие блокировки кнопок
+            +transparentBtn('Перезагрузка')
+    .installer-setup__columns
+        +customizationInput('Время клапана', '16:07', '16:07')
+        +customizationInput('Жесткость', '16:07', '16:07')
+        +customizationSelect('Контактная информация', 'Выкл', 'Выкл', 'Вкл')
+        +customizationInput('Настройка названия компании', '...', ' ')
+        +customizationInput('По времени (год)', '0.25', '0.25')
+
+        +customizationInput('Время промывки', '01:00', '01:00')
+        +customizationInput('Дней между промывками', '5', '5')
+        +customizationInput('Настройка телефона компании', '232-52-62', '232-52-62')
+        +customizationSelect('Сервис', 'Выкл', 'Выкл', 'Вкл')
+    
+    .installer-setup__btn 
+        +button('Сброс по времени')
+
+    .installer-setup__columns
+        +customizationInput('По объёму (м3)', '0', '0')
+
+    .installer-setup__btn 
+        +button('Сброс по объёму')

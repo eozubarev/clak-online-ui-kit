@@ -1,10 +1,23 @@
 .system-setup {
+    &__types {
+        &-select {
+            width: 100%;
+        }
+        &-label,
+        &-head {
+            width: 220px;
+            max-width: 100%;
+        }
+    }
     &__title {
         font-weight: 300;
         margin: 30px 0 25px;
     }
     &__container {
         column-count: 2;
+        @media (max-width: $tablet) {
+            column-count: 1;
+        }
     }
     &__btn {
         margin: 35px 0 35px;

@@ -8,7 +8,12 @@
         padding: 20px 0 20px;
         border-bottom: 1px solid #e0e0e7;
 
+        @media (max-width: $tablet) {
+            width: 100%;
+        }
+
         &__item {
+            font-size: 15px;
             text-align: center;
             width: 110px;
             max-width: 100%;
@@ -16,6 +21,10 @@
             border: 1px solid #e0e0e7;
             border-radius: 6px;
             cursor: pointer;
+            transition: $transition;
+            &.--active {
+                border-color: #b6c6d4;
+            }
             & p {
                 color: $active;
             }

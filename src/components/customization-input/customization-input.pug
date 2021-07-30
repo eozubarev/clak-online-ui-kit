@@ -1,6 +1,6 @@
-mixin customizationInput(title, value)
+mixin customizationInput(title, value, test)
     .customization__info-input 
         p.customization__info-input__title=title
         .customization__info-input__item
             p=value
-            input(type="hidden")
+            input(value=test type="hidden" onkeyup="this.value = this.value.replace(/[A-Za-zА-Яа-яЁё]/, '', ' ');")

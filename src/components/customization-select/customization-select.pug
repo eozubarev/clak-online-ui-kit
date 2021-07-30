@@ -9,3 +9,16 @@ mixin customizationSelect(title, selectHeadTitle, ...values)
                 ul.form__select-list
                     each value in values
                         li.form__select-item= value
+
+mixin customizationSelectTypes(title, selectHeadTitle, ...values)
+    .customization__select.system-setup__types-select
+        .customization__select-container
+            p= title
+            .form__wrapper
+            .form__label.form__select.system-setup__types-label
+                input.input__element(type='hidden' name='')
+                .form__select-head.system-setup__types-head= selectHeadTitle
+                ul.form__select-list
+                    each value in values
+                        li.form__select-item= value
+

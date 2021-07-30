@@ -77,7 +77,6 @@
     }
     &.--focused,
     &.--hasValue {
-        border-color: $active;
         & .input__element {
             opacity: 1;
         }

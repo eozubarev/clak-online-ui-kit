@@ -1,5 +1,8 @@
 .customization__select {
     width: 90%;
+    @media (max-width: $tablet) {
+        width: 100%;
+    }
     &-container {
         display: flex;
         align-items: center;

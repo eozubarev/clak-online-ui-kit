@@ -11739,6 +11739,40 @@ class Tooltip {
 }
 
 exports.default = Tooltip;
+},{}],"js/input.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+class Input {
+  constructor() {
+    this.inputs = document.querySelectorAll('.customization__info-input__item');
+    this.activeClass = '--active';
+    this.listeners();
+  }
+
+  listeners() {
+    for (let i = 0; i < this.inputs.length; i++) {
+      const input = this.inputs[i];
+      input.addEventListener('click', () => {
+        this.changeInputValue(input);
+        console.log(input);
+      });
+    }
+  }
+
+  changeInputValue(input) {
+    input.classList.add(this.activeClass);
+    input.childNodes[0].style.display = 'none';
+    input.childNodes[1].type = "visible";
+  }
+
+}
+
+exports.default = Input;
 },{}],"js/mask.js":[function(require,module,exports) {
 "use strict";
 
@@ -12807,6 +12841,8 @@ var _selectForm = _interopRequireDefault(require("./src/js/select-form.js"));
 
 var _tooltip = _interopRequireDefault(require("./src/js/tooltip.js"));
 
+var _input = _interopRequireDefault(require("./src/js/input.js"));
+
 var _form = _interopRequireDefault(require("./src/js/form.js"));
 
 var _tabs = _interopRequireDefault(require("./src/js/tabs.js"));
@@ -12829,15 +12865,16 @@ document.addEventListener('DOMContentLoaded', event => {
   new _selectForm.default();
   new _filterTabs.default();
   new _tooltip.default();
+  new _input.default();
   new _form.default();
   new _tabs.default();
   new _chartWaterflowMetr.default();
   new _customizationTabs.default();
   new _chartWaterFlow.default();
-  new _chartResource.default();
   new _chartReagent.default();
+  new _chartResource.default();
 });
-},{"./src/main.scss":"main.scss","./src/js/chart.js":"js/chart.js","./src/js/valve-controller-tabs.js":"js/valve-controller-tabs.js","./src/js/customization-tabs.js":"js/customization-tabs.js","./src/js/statistics-tabs.js":"js/statistics-tabs.js","./src/js/interval-tabs.js":"js/interval-tabs.js","./src/js/valves-tabs.js":"js/valves-tabs.js","./src/js/filter-tabs.js":"js/filter-tabs.js","./src/js/select-form.js":"js/select-form.js","./src/js/tooltip.js":"js/tooltip.js","./src/js/form.js":"js/form.js","./src/js/tabs.js":"js/tabs.js","./src/js/chart-waterflow-metr.js":"js/chart-waterflow-metr.js","./src/js/chart-water-flow.js":"js/chart-water-flow.js","./src/js/chart-resource.js":"js/chart-resource.js","./src/js/chart-reagent.js":"js/chart-reagent.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./src/main.scss":"main.scss","./src/js/chart.js":"js/chart.js","./src/js/valve-controller-tabs.js":"js/valve-controller-tabs.js","./src/js/customization-tabs.js":"js/customization-tabs.js","./src/js/statistics-tabs.js":"js/statistics-tabs.js","./src/js/interval-tabs.js":"js/interval-tabs.js","./src/js/valves-tabs.js":"js/valves-tabs.js","./src/js/filter-tabs.js":"js/filter-tabs.js","./src/js/select-form.js":"js/select-form.js","./src/js/tooltip.js":"js/tooltip.js","./src/js/input.js":"js/input.js","./src/js/form.js":"js/form.js","./src/js/tabs.js":"js/tabs.js","./src/js/chart-waterflow-metr.js":"js/chart-waterflow-metr.js","./src/js/chart-water-flow.js":"js/chart-water-flow.js","./src/js/chart-resource.js":"js/chart-resource.js","./src/js/chart-reagent.js":"js/chart-reagent.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -12865,7 +12902,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59420" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59450" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

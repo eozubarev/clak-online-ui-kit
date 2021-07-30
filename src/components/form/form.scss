@@ -549,7 +549,7 @@
             text-align: center;
             width: 110px;
             max-width: 100%;
-            padding: 7px 0px 7px 0px;
+            padding: 7px 25px 7px 10px;
             border: 1px solid #e0e0e7;
             border-radius: 6px;
             cursor: pointer;
@@ -565,13 +565,24 @@
                 height: 7px;
                 position: absolute;
                 top: 50%;
-                right: 0;
+                right: -10px;
                 margin-right: 20px;
                 border-top: 1px solid $border_arrow;
                 border-right: 1px solid $border_arrow;
                 transform: translateY(-50%) rotate3d(0, 0, 1, 135deg);
                 transition: transform $transition;
                 will-change: transform;
+            }
+            &::before {
+                // Custom overflow
+                content: "";
+                display: block;
+                width: 22px;
+                height: 14px;
+                position: absolute;
+                background-color: white;
+                top: 36%;
+                right: 1px;
             }
         }
         &-list {
@@ -592,10 +603,12 @@
             pointer-events: none;
             cursor: pointer;
             z-index: 11;
+            overflow: hidden;
+            overflow-y: scroll;
         }
         &-item {
             margin-top: 0px !important;
-            padding: 8px 0px 8px 0px;
+            padding: 12px;
             text-align: center;
             font-size: 15px;
             border-top: 1px solid $bg_gray;

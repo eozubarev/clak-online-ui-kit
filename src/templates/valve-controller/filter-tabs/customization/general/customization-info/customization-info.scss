@@ -1,5 +1,8 @@
 .customization__info {
     &-container {
         column-count: 2;
+        @media (max-width: $tablet) {
+            column-count: 1;
+        }
     }
 }
