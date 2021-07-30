@@ -1,0 +1,16 @@
+.warnings {
+    &-table__item {
+        width: calc(50% / 2);
+        &.--no-wifi {
+            width: 5%;
+        }
+        &.--offline {
+            width: 50%;
+        }
+        & span {
+            text-align: left;
+            font-weight: 400;
+            white-space: unset;
+        }
+    }
+}

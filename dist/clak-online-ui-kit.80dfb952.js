@@ -11511,6 +11511,138 @@ class StatisticsTabs {
 }
 
 exports.default = StatisticsTabs;
+},{}],"js/chart-waterflow-metr.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+class ChartWaterFlowMetr {
+  constructor() {
+    this.chart = document.getElementById("chart-warerflow-metr");
+    this.init();
+  }
+
+  init() {
+    new Chart(this.chart, {
+      type: 'line',
+      data: {
+        labels: ['28:04:20', '30:04:20', '05:05:20', '10:05:20', '15:15:20'],
+        datasets: [{
+          fill: true,
+          tension: 0.3,
+          label: 'Расход воды, м3',
+          data: [0, 21, 2, 28, 10, 28],
+          backgroundColor: ['#1c8ec342'],
+          borderColor: ['#028fc5'],
+          borderWidth: 2
+        }]
+      },
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true
+            }
+          }]
+        }
+      }
+    });
+  }
+
+}
+
+exports.default = ChartWaterFlowMetr;
+},{}],"js/chart-water-flow.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+class ChartWaterFlow {
+  constructor() {
+    this.chart = document.getElementById("chart-warer-flow");
+    this.init();
+  }
+
+  init() {
+    new Chart(this.chart, {
+      type: 'line',
+      data: {
+        labels: ['14:04:34', '14:06:28', '14:08:22', '14:10:16', '14:12:10'],
+        datasets: [{
+          fill: true,
+          tension: 0.3,
+          label: 'Расход воды, л/мин',
+          data: [20, 20, 18, 19, 17, 3],
+          backgroundColor: ['#1c8ec342'],
+          borderColor: ['#1C8EC3'],
+          borderWidth: 2
+        }]
+      },
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true
+            }
+          }]
+        }
+      }
+    });
+  }
+
+}
+
+exports.default = ChartWaterFlow;
+},{}],"js/chart-reagent.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+class ChartReagent {
+  constructor() {
+    this.chart = document.getElementById("chart-reagent");
+    this.init();
+  }
+
+  init() {
+    new Chart(this.chart, {
+      type: 'line',
+      data: {
+        labels: ['14:04:34', '14:06:28', '14:08:22', '14:10:16', '14:12:10'],
+        datasets: [{
+          fill: true,
+          tension: 0.3,
+          label: 'Расход реагента, кг',
+          data: [0, 0, 0, 0, 0, 0],
+          backgroundColor: ['#1c8ec342'],
+          borderColor: ['#028fc5'],
+          borderWidth: 2
+        }]
+      },
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true
+            }
+          }]
+        }
+      }
+    });
+  }
+
+}
+
+exports.default = ChartReagent;
 },{}],"js/interval-tabs.js":[function(require,module,exports) {
 "use strict";
 
@@ -12653,171 +12785,6 @@ class Tabs {
 }
 
 exports.default = Tabs;
-},{}],"js/chart-waterflow-metr.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-class ChartWaterFlowMetr {
-  constructor() {
-    this.chart = document.getElementById("chart-warerflow-metr");
-    this.init();
-  }
-
-  init() {
-    new Chart(this.chart, {
-      type: 'line',
-      data: {
-        labels: ['28:04:20', '30:04:20', '05:05:20', '10:05:20', '15:15:20'],
-        datasets: [{
-          fill: true,
-          tension: 0.3,
-          label: 'Расход воды, м3',
-          data: [0, 21, 2, 28, 10, 28],
-          backgroundColor: ['#1c8ec342'],
-          borderColor: ['#028fc5'],
-          borderWidth: 2
-        }]
-      },
-      options: {
-        scales: {
-          yAxes: [{
-            ticks: {
-              beginAtZero: true
-            }
-          }]
-        }
-      }
-    });
-  }
-
-}
-
-exports.default = ChartWaterFlowMetr;
-},{}],"js/chart-water-flow.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-class ChartWaterFlow {
-  constructor() {
-    this.chart = document.getElementById("chart-warer-flow");
-    this.init();
-  }
-
-  init() {
-    new Chart(this.chart, {
-      type: 'line',
-      data: {
-        labels: ['14:04:34', '14:06:28', '14:08:22', '14:10:16', '14:12:10'],
-        datasets: [{
-          fill: true,
-          tension: 0.3,
-          label: 'Расход воды, л/мин',
-          data: [20, 20, 18, 19, 17, 3],
-          backgroundColor: ['#1c8ec342'],
-          borderColor: ['#1C8EC3'],
-          borderWidth: 2
-        }]
-      },
-      options: {
-        scales: {
-          yAxes: [{
-            ticks: {
-              beginAtZero: true
-            }
-          }]
-        }
-      }
-    });
-  }
-
-}
-
-exports.default = ChartWaterFlow;
-},{}],"js/chart-resource.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-class ChartResource {
-  constructor() {
-    this.chart = document.getElementById("chart-resource");
-    this.init();
-  }
-
-  init() {
-    new Chart(this.chart, {
-      type: 'doughnut',
-      data: {
-        labels: ['Оставшийся ресурс (%)', 'Весь ресурс (%)'],
-        datasets: [{
-          tension: 0.3,
-          label: 'Оставшийся ресурс',
-          data: [20, 80],
-          backgroundColor: ['#1C8EC3', '#EBECF0'],
-          hoverOffset: 4
-        }]
-      }
-    });
-  }
-
-}
-
-exports.default = ChartResource;
-},{}],"js/chart-reagent.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-class ChartReagent {
-  constructor() {
-    this.chart = document.getElementById("chart-reagent");
-    this.init();
-  }
-
-  init() {
-    new Chart(this.chart, {
-      type: 'line',
-      data: {
-        labels: ['14:04:34', '14:06:28', '14:08:22', '14:10:16', '14:12:10'],
-        datasets: [{
-          fill: true,
-          tension: 0.3,
-          label: 'Расход реагента, кг',
-          data: [0, 0, 0, 0, 0, 0],
-          backgroundColor: ['#1c8ec342'],
-          borderColor: ['#028fc5'],
-          borderWidth: 2
-        }]
-      },
-      options: {
-        scales: {
-          yAxes: [{
-            ticks: {
-              beginAtZero: true
-            }
-          }]
-        }
-      }
-    });
-  }
-
-}
-
-exports.default = ChartReagent;
 },{}],"../index.js":[function(require,module,exports) {
 "use strict";
 
@@ -12830,6 +12797,12 @@ var _valveControllerTabs = _interopRequireDefault(require("./src/js/valve-contro
 var _customizationTabs = _interopRequireDefault(require("./src/js/customization-tabs.js"));
 
 var _statisticsTabs = _interopRequireDefault(require("./src/js/statistics-tabs.js"));
+
+var _chartWaterflowMetr = _interopRequireDefault(require("./src/js/chart-waterflow-metr.js"));
+
+var _chartWaterFlow = _interopRequireDefault(require("./src/js/chart-water-flow.js"));
+
+var _chartReagent = _interopRequireDefault(require("./src/js/chart-reagent.js"));
 
 var _intervalTabs = _interopRequireDefault(require("./src/js/interval-tabs.js"));
 
@@ -12847,18 +12820,16 @@ var _form = _interopRequireDefault(require("./src/js/form.js"));
 
 var _tabs = _interopRequireDefault(require("./src/js/tabs.js"));
 
-var _chartWaterflowMetr = _interopRequireDefault(require("./src/js/chart-waterflow-metr.js"));
-
-var _chartWaterFlow = _interopRequireDefault(require("./src/js/chart-water-flow.js"));
-
-var _chartResource = _interopRequireDefault(require("./src/js/chart-resource.js"));
-
-var _chartReagent = _interopRequireDefault(require("./src/js/chart-reagent.js"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// import ChartResource from './src/js/chart-resource.js';
 document.addEventListener('DOMContentLoaded', event => {
   new _valveControllerTabs.default();
+  new _chartWaterflowMetr.default();
+  new _customizationTabs.default();
+  new _chartWaterFlow.default();
+  new _chartReagent.default(); // new ChartResource;
+
   new _statisticsTabs.default();
   new _intervalTabs.default();
   new _valvesTabs.default();
@@ -12868,13 +12839,8 @@ document.addEventListener('DOMContentLoaded', event => {
   new _input.default();
   new _form.default();
   new _tabs.default();
-  new _chartWaterflowMetr.default();
-  new _customizationTabs.default();
-  new _chartWaterFlow.default();
-  new _chartReagent.default();
-  new _chartResource.default();
 });
-},{"./src/main.scss":"main.scss","./src/js/chart.js":"js/chart.js","./src/js/valve-controller-tabs.js":"js/valve-controller-tabs.js","./src/js/customization-tabs.js":"js/customization-tabs.js","./src/js/statistics-tabs.js":"js/statistics-tabs.js","./src/js/interval-tabs.js":"js/interval-tabs.js","./src/js/valves-tabs.js":"js/valves-tabs.js","./src/js/filter-tabs.js":"js/filter-tabs.js","./src/js/select-form.js":"js/select-form.js","./src/js/tooltip.js":"js/tooltip.js","./src/js/input.js":"js/input.js","./src/js/form.js":"js/form.js","./src/js/tabs.js":"js/tabs.js","./src/js/chart-waterflow-metr.js":"js/chart-waterflow-metr.js","./src/js/chart-water-flow.js":"js/chart-water-flow.js","./src/js/chart-resource.js":"js/chart-resource.js","./src/js/chart-reagent.js":"js/chart-reagent.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./src/main.scss":"main.scss","./src/js/chart.js":"js/chart.js","./src/js/valve-controller-tabs.js":"js/valve-controller-tabs.js","./src/js/customization-tabs.js":"js/customization-tabs.js","./src/js/statistics-tabs.js":"js/statistics-tabs.js","./src/js/chart-waterflow-metr.js":"js/chart-waterflow-metr.js","./src/js/chart-water-flow.js":"js/chart-water-flow.js","./src/js/chart-reagent.js":"js/chart-reagent.js","./src/js/interval-tabs.js":"js/interval-tabs.js","./src/js/valves-tabs.js":"js/valves-tabs.js","./src/js/filter-tabs.js":"js/filter-tabs.js","./src/js/select-form.js":"js/select-form.js","./src/js/tooltip.js":"js/tooltip.js","./src/js/input.js":"js/input.js","./src/js/form.js":"js/form.js","./src/js/tabs.js":"js/tabs.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -12902,7 +12868,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59450" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52292" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

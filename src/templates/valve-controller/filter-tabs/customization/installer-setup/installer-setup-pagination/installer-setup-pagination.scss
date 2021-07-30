@@ -1,0 +1,21 @@
+.installer-setup-pagination {
+    &__btns {
+        display: flex;
+        margin-right: 35px;
+        & button {
+            width: 180px;
+            &:first-child {
+                margin-right: 25px;
+            }
+        }
+    }
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 50px 0 40px;
+    }
+    &__warning {
+        font-size: 13px;
+    }
+}

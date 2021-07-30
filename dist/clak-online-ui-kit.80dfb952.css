@@ -2300,6 +2300,21 @@ button:active {
   display: block;
 }
 
+.warnings-table__item {
+  width: calc(50% / 2);
+}
+.warnings-table__item.--no-wifi {
+  width: 5%;
+}
+.warnings-table__item.--offline {
+  width: 50%;
+}
+.warnings-table__item span {
+  text-align: left;
+  font-weight: 400;
+  white-space: unset;
+}
+
 .filter-tabs__nav-tabs {
   position: relative;
 }
@@ -2529,6 +2544,26 @@ button:active {
   font-size: 13px;
 }
 
+.system-setup__pagination-btns {
+  display: flex;
+  margin-right: 35px;
+}
+.system-setup__pagination-btns button {
+  width: 180px;
+}
+.system-setup__pagination-btns button:first-child {
+  margin-right: 25px;
+}
+.system-setup__pagination-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 40px 0 40px;
+}
+.system-setup__pagination-warning {
+  font-size: 13px;
+}
+
 .configuration-pagination__btns {
   display: flex;
   margin-right: 35px;
@@ -2549,23 +2584,23 @@ button:active {
   font-size: 13px;
 }
 
-.system-setup__pagination-btns {
+.installer-setup-pagination__btns {
   display: flex;
   margin-right: 35px;
 }
-.system-setup__pagination-btns button {
+.installer-setup-pagination__btns button {
   width: 180px;
 }
-.system-setup__pagination-btns button:first-child {
+.installer-setup-pagination__btns button:first-child {
   margin-right: 25px;
 }
-.system-setup__pagination-container {
+.installer-setup-pagination__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 40px 0 40px;
+  margin: 50px 0 40px;
 }
-.system-setup__pagination-warning {
+.installer-setup-pagination__warning {
   font-size: 13px;
 }
 
