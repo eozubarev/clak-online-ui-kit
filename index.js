@@ -6,7 +6,7 @@ import CustomizationTabs from './src/js/customization-tabs.js';
 import StatisticsTabs from './src/js/statistics-tabs.js';
 import ChartWaterFlowMetr from './src/js/chart-waterflow-metr.js';
 import ChartWaterFlow from './src/js/chart-water-flow.js';
-// import ChartResource from './src/js/chart-resource.js';
+import ChartResource from './src/js/chart-resource.js';
 import ChartReagent from './src/js/chart-reagent.js';
 import IntervalTabs from './src/js/interval-tabs.js';
 import ValvesTabs from './src/js/valves-tabs.js';
@@ -22,11 +22,7 @@ import Tabs from './src/js/tabs.js';
 
 document.addEventListener( 'DOMContentLoaded', event => {
     new ValveControllerTabs;
-    new ChartWaterFlowMetr;
     new CustomizationTabs;
-    new ChartWaterFlow;
-    new ChartReagent;
-    // new ChartResource;
     new StatisticsTabs;
     new IntervalTabs;
     new ValvesTabs;
@@ -50,22 +46,7 @@ document.addEventListener( 'DOMContentLoaded', event => {
     }
 
     if (document.getElementById('chart-resource')) {
-            new Chart(this.chart, {
-            type: 'doughnut',
-            data: {
-                labels: ['Оставшийся ресурс (%)','Весь ресурс (%)'],
-                datasets: [{
-                    tension: 0.3,
-                    label: 'Оставшийся ресурс',
-                    data: [20, 80],
-                    backgroundColor: [
-                        '#1C8EC3',
-                        '#EBECF0'
-                    ],
-                    hoverOffset: 4,
-                }]
-            },
-        });
+        new ChartResource;
     }
 
 });
