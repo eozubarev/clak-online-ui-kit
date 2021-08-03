@@ -1,7 +1,7 @@
 export default class ChartResource {
     constructor() {
         this.chart = document.getElementById("chart-resource");
-        // this.init();
+        this.init();
     }
     init() {
         new Chart(this.chart, {

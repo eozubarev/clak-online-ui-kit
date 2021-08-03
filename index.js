@@ -22,11 +22,11 @@ import Tabs from './src/js/tabs.js';
 
 document.addEventListener( 'DOMContentLoaded', event => {
     new ValveControllerTabs;
-    // new ChartWaterFlowMetr;
+    new ChartWaterFlowMetr;
     new CustomizationTabs;
-    // new ChartWaterFlow;
-    // new ChartReagent;
-    // new ChartResource;
+    new ChartWaterFlow;
+    new ChartReagent;
+    new ChartResource;
     new StatisticsTabs;
     new IntervalTabs;
     new ValvesTabs;

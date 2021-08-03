@@ -11609,7 +11609,8 @@ exports.default = void 0;
 
 class ChartResource {
   constructor() {
-    this.chart = document.getElementById("chart-resource"); // this.init();
+    this.chart = document.getElementById("chart-resource");
+    this.init();
   }
 
   init() {
@@ -12857,12 +12858,12 @@ var _tabs = _interopRequireDefault(require("./src/js/tabs.js"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 document.addEventListener('DOMContentLoaded', event => {
-  new _valveControllerTabs.default(); // new ChartWaterFlowMetr;
-
-  new _customizationTabs.default(); // new ChartWaterFlow;
-  // new ChartReagent;
-  // new ChartResource;
-
+  new _valveControllerTabs.default();
+  new _chartWaterflowMetr.default();
+  new _customizationTabs.default();
+  new _chartWaterFlow.default();
+  new _chartReagent.default();
+  new _chartResource.default();
   new _statisticsTabs.default();
   new _intervalTabs.default();
   new _valvesTabs.default();
@@ -12917,7 +12918,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59630" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60077" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
