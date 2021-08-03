@@ -2,10 +2,16 @@
     &-btns {
         display: flex;
         margin-right: 35px;
+        @media (max-width: $tabletWide) {
+            margin-right: 0px;
+        }
         & button {
             width: 180px;
             &:first-child {
                 margin-right: 25px;
+                @media (max-width: $tabletWide) {
+                    margin-right: 0px;
+                }
             }
         }
     }
@@ -14,8 +20,18 @@
         align-items: center;
         justify-content: space-between;
         margin: 40px 0 40px;
+        @media (max-width: $tabletWide) {
+            flex-direction: column;
+        }
     }
     &-warning {
         font-size: 13px;
+        & p {
+            text-align: center;
+            margin-top: 25px;
+            @media (max-width: $phoneSmall) {
+                margin-top: 15px;
+            }
+        }
     }
 }

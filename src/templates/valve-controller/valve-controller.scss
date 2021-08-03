@@ -25,6 +25,9 @@
                 border-radius: 3px;
                 background-color: #f6f6f8;
                 transition: $transition;
+                @media (max-width: $phoneSmall) {
+                    width: 120px;
+                }
             }
             &.--active {
                 & span {
@@ -42,6 +45,9 @@
                 position: absolute;
                 left: 8px;
                 top: -62px;
+                @media (max-width: $phoneSmall) {
+                    left: -6px;
+                }
             }
             &::after {
                 top: -75px;
@@ -55,10 +61,16 @@
                 position: absolute;
                 top: -62px;
                 left: 180px;
+                @media (max-width: $phoneSmall) {
+                    left: 129px;
+                }
             }
             &::after {
                 top: -75px;
                 left: 140px;
+                @media (max-width: $phoneSmall) {
+                    left: 105px;
+                }
             }
         }
     }

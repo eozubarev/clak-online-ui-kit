@@ -185,6 +185,12 @@ button:active {
   padding: 20px 0 20px;
   border-bottom: 1px solid #e0e0e7;
 }
+.customization__select-container.--type-systems {
+  flex-direction: column;
+}
+.customization__select-container p {
+  margin-right: 15px;
+}
 
 .customization__info-input {
   width: 90%;
@@ -2151,11 +2157,21 @@ button:active {
   display: flex;
   align-items: center;
 }
+@media (max-width: 767px) {
+  .installer-setup__nav-tabs {
+    flex-direction: column;
+  }
+}
 .installer-setup__nav-tabs button {
   padding: 15px 25px 15px 25px;
   width: 180px;
   font-size: 15px;
   margin-left: 20px;
+}
+@media (max-width: 767px) {
+  .installer-setup__nav-tabs button {
+    margin-left: 0px;
+  }
 }
 .installer-setup__nav-tab {
   background-color: #ebecf0;
@@ -2166,10 +2182,20 @@ button:active {
   transition: 0.3s ease;
   text-align: center;
 }
+@media (max-width: 900px) {
+  .installer-setup__nav-tab {
+    font-size: 14px;
+  }
+}
+@media (max-width: 767px) {
+  .installer-setup__nav-tab {
+    margin-bottom: 15px;
+  }
+}
 @media (max-width: 479px) {
   .installer-setup__nav-tab {
     padding: 10px 15px 10px 15px;
-    width: 120px;
+    width: 215px;
   }
 }
 .installer-setup__nav-tab:first-child {
@@ -2197,6 +2223,15 @@ button:active {
   width: 220px;
   max-width: 100%;
 }
+@media (max-width: 479px) {
+  .system-setup__types-container {
+    flex-direction: column;
+  }
+  .system-setup__types-container p {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
 .system-setup__title {
   font-weight: 300;
   margin: 30px 0 25px;
@@ -2219,9 +2254,28 @@ button:active {
 .customization__container {
   margin-top: 20px;
 }
+@media (max-width: 767px) {
+  .customization__container {
+    overflow: hidden;
+  }
+}
 .customization__nav-tabs {
+  display: flex;
+  align-items: center;
+  padding: 20px 50px 0px 50px;
   background: linear-gradient(90deg, #00a5e9 13%, #079bd7 47%, #038ec9 63%);
-  padding: 20px 50px 20px 50px;
+}
+@media (max-width: 767px) {
+  .customization__nav-tabs {
+    overflow: hidden;
+    overflow-x: scroll;
+  }
+}
+@media (max-width: 400px) {
+  .customization__nav-tabs {
+    padding: 15px 25px 15px 25px;
+    font-size: 13px;
+  }
 }
 .customization__title-item {
   margin: 15px 0px 10px;
@@ -2234,6 +2288,16 @@ button:active {
   margin-right: 30px;
   transition: 0.3s ease;
   position: relative;
+}
+@media (max-width: 767px) {
+  .customization__nav-tab {
+    white-space: nowrap;
+  }
+}
+@media (max-width: 400px) {
+  .customization__nav-tab {
+    margin-bottom: 0px;
+  }
 }
 .customization__nav-tab:last-child {
   margin-right: 0px;
@@ -2249,6 +2313,11 @@ button:active {
   width: 100%;
   display: none;
   padding-top: 35px;
+}
+@media (max-width: 767px) {
+  .customization__tab-pane {
+    padding-top: 15px;
+  }
 }
 .customization__tab-pane.active {
   display: block;
@@ -2479,6 +2548,11 @@ button:active {
   background-color: #f6f6f8;
   transition: 0.3s ease;
 }
+@media (max-width: 400px) {
+  .valve-controller__tabs-system__first::after, .valve-controller__tabs-system__two::after {
+    width: 120px;
+  }
+}
 .valve-controller__tabs-system__first.--active span, .valve-controller__tabs-system__two.--active span {
   color: #2a2a2a;
 }
@@ -2492,6 +2566,11 @@ button:active {
   left: 8px;
   top: -62px;
 }
+@media (max-width: 400px) {
+  .valve-controller__tabs-system__first span {
+    left: -6px;
+  }
+}
 .valve-controller__tabs-system__first::after {
   top: -75px;
   left: -30px;
@@ -2503,9 +2582,19 @@ button:active {
   top: -62px;
   left: 180px;
 }
+@media (max-width: 400px) {
+  .valve-controller__tabs-system__two span {
+    left: 129px;
+  }
+}
 .valve-controller__tabs-system__two::after {
   top: -75px;
   left: 140px;
+}
+@media (max-width: 400px) {
+  .valve-controller__tabs-system__two::after {
+    left: 105px;
+  }
 }
 .valve-controller__header-tabs {
   display: flex;
@@ -2639,8 +2728,25 @@ button:active {
   display: flex;
   margin-right: 35px;
 }
+@media (max-width: 479px) {
+  .general-pagination__btns {
+    flex-direction: column;
+  }
+}
+@media (max-width: 900px) {
+  .general-pagination__btns {
+    margin-right: 0px;
+  }
+}
 .general-pagination__btns button {
   width: 180px;
+}
+@media (max-width: 479px) {
+  .general-pagination__btns button {
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 180px;
+  }
 }
 .general-pagination__btns button:first-child {
   margin-right: 25px;
@@ -2651,13 +2757,32 @@ button:active {
   justify-content: space-between;
   margin: 40px 0 40px;
 }
+@media (max-width: 900px) {
+  .general-pagination__container {
+    flex-direction: column;
+  }
+}
 .general-pagination__warning {
   font-size: 13px;
+}
+.general-pagination__warning p {
+  text-align: center;
+  margin-top: 25px;
+}
+@media (max-width: 400px) {
+  .general-pagination__warning p {
+    margin-top: 15px;
+  }
 }
 
 .system-setup__pagination-btns {
   display: flex;
   margin-right: 35px;
+}
+@media (max-width: 900px) {
+  .system-setup__pagination-btns {
+    margin-right: 0px;
+  }
 }
 .system-setup__pagination-btns button {
   width: 180px;
@@ -2665,25 +2790,65 @@ button:active {
 .system-setup__pagination-btns button:first-child {
   margin-right: 25px;
 }
+@media (max-width: 900px) {
+  .system-setup__pagination-btns button:first-child {
+    margin-right: 0px;
+  }
+}
 .system-setup__pagination-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 40px 0 40px;
 }
+@media (max-width: 900px) {
+  .system-setup__pagination-container {
+    flex-direction: column;
+  }
+}
 .system-setup__pagination-warning {
   font-size: 13px;
+}
+.system-setup__pagination-warning p {
+  text-align: center;
+  margin-top: 25px;
+}
+@media (max-width: 400px) {
+  .system-setup__pagination-warning p {
+    margin-top: 15px;
+  }
 }
 
 .configuration-pagination__btns {
   display: flex;
   margin-right: 35px;
 }
+@media (max-width: 479px) {
+  .configuration-pagination__btns {
+    flex-direction: column;
+  }
+}
+@media (max-width: 900px) {
+  .configuration-pagination__btns {
+    margin-right: 0px;
+  }
+}
 .configuration-pagination__btns button {
   width: 180px;
 }
+@media (max-width: 479px) {
+  .configuration-pagination__btns button {
+    width: 100%;
+    max-width: 180px;
+  }
+}
 .configuration-pagination__btns button:first-child {
   margin-right: 25px;
+}
+@media (max-width: 479px) {
+  .configuration-pagination__btns button:first-child {
+    margin-bottom: 20px;
+  }
 }
 .configuration-pagination__container {
   display: flex;
@@ -2691,13 +2856,32 @@ button:active {
   justify-content: space-between;
   margin: 0px 0 40px;
 }
+@media (max-width: 900px) {
+  .configuration-pagination__container {
+    flex-direction: column;
+  }
+}
 .configuration-pagination__warning {
   font-size: 13px;
+}
+.configuration-pagination__warning p {
+  text-align: center;
+  margin-top: 25px;
+}
+@media (max-width: 400px) {
+  .configuration-pagination__warning p {
+    margin-top: 15px;
+  }
 }
 
 .installer-setup-pagination__btns {
   display: flex;
   margin-right: 35px;
+}
+@media (max-width: 767px) {
+  .installer-setup-pagination__btns {
+    margin-right: 0px;
+  }
 }
 .installer-setup-pagination__btns button {
   width: 180px;
@@ -2705,14 +2889,28 @@ button:active {
 .installer-setup-pagination__btns button:first-child {
   margin-right: 25px;
 }
+@media (max-width: 767px) {
+  .installer-setup-pagination__btns button:first-child {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
 .installer-setup-pagination__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 50px 0 40px;
 }
+@media (max-width: 767px) {
+  .installer-setup-pagination__container {
+    flex-direction: column;
+  }
+}
 .installer-setup-pagination__warning {
   font-size: 13px;
+}
+.installer-setup-pagination__warning p {
+  text-align: center;
 }
 
 /*# sourceMappingURL=/clak-online-ui-kit.80dfb952.css.map */

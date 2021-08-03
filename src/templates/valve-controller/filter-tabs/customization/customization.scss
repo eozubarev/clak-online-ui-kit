@@ -1,15 +1,28 @@
 .customization {
     &__container {
         margin-top: 20px;
+        @media (max-width: $tablet) {
+            overflow: hidden;
+        }
     }
     &__nav-tabs {
+        display: flex;
+        align-items: center;
+        padding: 20px 50px 0px 50px;
         background: linear-gradient(
             90deg,
             rgba(0, 165, 233, 1) 13%,
             rgba(7, 155, 215, 1) 47%,
             rgba(3, 142, 201, 1) 63%
         );
-        padding: 20px 50px 20px 50px;
+        @media (max-width: $tablet) {
+            overflow: hidden;
+            overflow-x: scroll;
+        }
+        @media (max-width: $phoneSmall) {
+            padding: 15px 25px 15px 25px;
+            font-size: 13px;
+        }
     }
     &__title-item {
         margin: 15px 0px 10px;
@@ -22,6 +35,12 @@
         margin-right: 30px;
         transition: $transition;
         position: relative;
+        @media (max-width: $tablet) {
+            white-space: nowrap;
+        }
+        @media (max-width: $phoneSmall) {
+            margin-bottom: 0px;
+        }
         &:last-child {
             margin-right: 0px;
         }
@@ -37,6 +56,9 @@
         width: 100%;
         display: none;
         padding-top: 35px;
+        @media (max-width: $tablet) {
+            padding-top: 15px;
+        }
         &.active {
             display: block;
         }

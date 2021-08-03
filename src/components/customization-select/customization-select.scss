@@ -9,5 +9,11 @@
         justify-content: space-between;
         padding: 20px 0 20px;
         border-bottom: 1px solid #e0e0e7;
+        &.--type-systems {
+            flex-direction: column;
+        }
+        & p {
+            margin-right: 15px;
+        }
     }
 }

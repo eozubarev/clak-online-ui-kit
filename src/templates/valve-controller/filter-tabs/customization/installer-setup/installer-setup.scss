@@ -19,11 +19,17 @@
         &-tabs {
             display: flex;
             align-items: center;
+            @media (max-width: $tablet) {
+                flex-direction: column;
+            }
             & button {
                 padding: 15px 25px 15px 25px;
                 width: 180px;
                 font-size: 15px;
                 margin-left: 20px;
+                @media (max-width: $tablet) {
+                    margin-left: 0px;
+                }
             }
         }
         &-tab {
@@ -34,9 +40,15 @@
             width: 260px;
             transition: $transition;
             text-align: center;
+            @media (max-width: $tabletWide) {
+                font-size: 14px;
+            }
+            @media (max-width: $tablet) {
+                margin-bottom: 15px;
+            }
             @media (max-width: $phone) {
                 padding: 10px 15px 10px 15px;
-                width: 120px;
+                width: 215px;
             }
             &:first-child {
                 position: relative;

@@ -8,6 +8,15 @@
             width: 220px;
             max-width: 100%;
         }
+        &-container {
+            @media (max-width: $phone) {
+                flex-direction: column;
+                & p {
+                    margin-right: 0;
+                    margin-bottom: 20px;
+                }
+            }
+        }
     }
     &__title {
         font-weight: 300;
