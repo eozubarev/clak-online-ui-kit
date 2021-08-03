@@ -1,14 +1,32 @@
-.statistics, .interval {
+.statistics,
+.interval {
     &__title {
         font-weight: 300;
         margin: 20px 0 25px;
+        @media (max-width: $phone) {
+            font-size: 18px;
+            text-align: center;
+        }
     }
-     &__nav {
+    &__nav {
         &-tabs {
             display: flex;
             align-items: center;
+            @media (max-width: $tablet) {
+                margin-bottom: 25px;
+                padding: 0px 7px 0px 7px;
+            }
+            @media (max-width: $phoneSmall) {
+                padding-bottom: 15px;
+                flex-direction: column;
+                margin: 0 auto;
+                width: 150px;
+            }
             &.second {
                 margin-bottom: 25px;
+                @media (max-width: $phoneSmall) {
+                    margin-bottom: 0;
+                }
             }
         }
         &-tab {
@@ -22,9 +40,13 @@
             width: 140px;
             transition: $transition;
             text-align: center;
-            @media(max-width: $phone) {
-                padding: 10px 15px 10px 15px;
-                width: 120px;
+            @media (max-width: $tablet) {
+                padding: 10px 5px 10px 5px;
+                width: 100%;
+                font-size: 12px;
+            }
+            @media (max-width: $phoneSmall) {
+                width: 150px;
             }
             &:first-child {
                 position: relative;

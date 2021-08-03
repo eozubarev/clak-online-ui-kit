@@ -1,18 +1,18 @@
 // Шрифты
-$roboto: 'Roboto', Arial, sans-serif;
+$roboto: "Roboto", Arial, sans-serif;
 
 // Цвета
 $error: #ff0000;
 
 $active: #1ba4d9;
 $activeLight: #258c97;
-$active30: rgba(12, 127, 139, .3);
-$active50: rgba(12, 127, 139, .5);
+$active30: rgba(12, 127, 139, 0.3);
+$active50: rgba(12, 127, 139, 0.5);
 $border: #ccc;
 
 $white: #fff;
-$white20: rgba(255,255,255,.2);
-$white30: rgba(255,255,255,.3);
+$white20: rgba(255, 255, 255, 0.2);
+$white30: rgba(255, 255, 255, 0.3);
 $black: #202020;
 $priceBenefitIcon: #c7dbba;
 
@@ -21,23 +21,22 @@ $tableActive: #eaf2f3;
 
 $grey: #aaa;
 $greyDark: #43515f;
-$greyDark95: rgba(67, 81, 95,.95);
+$greyDark95: rgba(67, 81, 95, 0.95);
 
 $iconBg: #e4f5e5;
 
 $formBg: #eaf2f3;
-$formPlaceholder: rgba(0,0,0,.44);
+$formPlaceholder: rgba(0, 0, 0, 0.44);
 $footerBg: #eaf2f3;
 
-$buttonBgImage: linear-gradient( 0deg, rgba(0,0,0,.1) 0%, rgba(255,255,255,.1) 100%);
-$buttonBgImageHover: linear-gradient( 180deg, rgba(0,0,0,.05) 100%, rgba(255,255,255,.05) 0%);
+$buttonBgImage: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%);
+$buttonBgImageHover: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 100%, rgba(255, 255, 255, 0.05) 0%);
 
-$titleBg: linear-gradient(45deg, rgb(200,220,184) 0%, rgb(185,208,204) 50%, rgb(200,206,218) 100%);
+$titleBg: linear-gradient(45deg, rgb(200, 220, 184) 0%, rgb(185, 208, 204) 50%, rgb(200, 206, 218) 100%);
 
 // Тень
-$shadow: 0 4px 15px rgba(0, 0, 0, .4);
-$shadow2: 0 1px 10px rgba(0, 0, 0, .35);
-
+$shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+$shadow2: 0 1px 10px rgba(0, 0, 0, 0.35);
 
 $black: #2a2a2a;
 $blue: #007bb3;
@@ -123,8 +122,8 @@ $bg_tonningHeroTab: #cce1ed;
 
 $form_slider: #f0f1f3;
 $form_sliderShadow: 0px 10px 20px 0px rgba(77, 80, 85, 0.2);
-$form-step: #43ABD0;
-$form-step-active: #64C5E6;
+$form-step: #43abd0;
+$form-step-active: #64c5e6;
 
 // Адаптив
 $desktopWide: 1601px;
@@ -133,6 +132,7 @@ $desktopSmall: 1279px;
 $notebook: 1023px;
 $tabletWide: 900px;
 $tablet: 767px;
+$phoneBig: 567px;
 $phone: 479px;
 $phoneSmall: 400px;
 

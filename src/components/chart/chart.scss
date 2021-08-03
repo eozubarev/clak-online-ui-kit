@@ -1,41 +1,49 @@
 .chart {
     &__container {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: center;
         &:first-child {
             margin-bottom: 45px;
+            @media (max-width: $phone) {
+                margin-bottom: 0px;
+            }
         }
-        @media(max-width: $tablet) {
+        @media (max-width: $tablet) {
             flex-direction: column;
         }
     }
     &__left {
         width: 47%;
-        @media(max-width: $tablet) {
+        @media (max-width: $tablet) {
             width: 100%;
             margin-bottom: 30px;
         }
     }
     &__right {
         width: 47%;
-        @media(max-width: $tablet) {
+        @media (max-width: $tablet) {
             width: 100%;
         }
         &.--resource {
-            width: 30%;
-            @media(max-width: $tablet) {
+            width: 33%;
+            margin: 35px 0px 0px 70px;
+            @media (max-width: $tablet) {
                 width: 55%;
+                margin: 0;
+            }
+            @media (max-width: $phone) {
+                width: 80%;
+                margin: 0;
             }
         }
     }
     &__title {
         font-weight: 300;
         margin-bottom: 25px;
-        @media(max-width: $tablet) {
+        @media (max-width: $tablet) {
             font-size: 18px;
             text-align: center;
         }
     }
-
 }

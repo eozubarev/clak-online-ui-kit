@@ -16,8 +16,9 @@
             margin-right: 10px;
         }
         @media (max-width: $phone) {
-            padding: 10px 15px 10px 15px;
+            padding: 10px 0px 10px 0px;
             width: 120px;
+            font-size: 11px;
         }
         &:hover {
             color: white;
