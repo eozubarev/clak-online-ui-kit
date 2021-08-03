@@ -12887,7 +12887,19 @@ document.addEventListener('DOMContentLoaded', event => {
   }
 
   if (document.getElementById('chart-resource')) {
-    new _chartResource.default();
+    new Chart((void 0).chart, {
+      type: 'doughnut',
+      data: {
+        labels: ['Оставшийся ресурс (%)', 'Весь ресурс (%)'],
+        datasets: [{
+          tension: 0.3,
+          label: 'Оставшийся ресурс',
+          data: [20, 80],
+          backgroundColor: ['#1C8EC3', '#EBECF0'],
+          hoverOffset: 4
+        }]
+      }
+    });
   }
 });
 },{"./src/main.scss":"main.scss","./src/js/chart.js":"js/chart.js","./src/js/valve-controller-tabs.js":"js/valve-controller-tabs.js","./src/js/customization-tabs.js":"js/customization-tabs.js","./src/js/statistics-tabs.js":"js/statistics-tabs.js","./src/js/chart-waterflow-metr.js":"js/chart-waterflow-metr.js","./src/js/chart-water-flow.js":"js/chart-water-flow.js","./src/js/chart-resource.js":"js/chart-resource.js","./src/js/chart-reagent.js":"js/chart-reagent.js","./src/js/interval-tabs.js":"js/interval-tabs.js","./src/js/valves-tabs.js":"js/valves-tabs.js","./src/js/filter-tabs.js":"js/filter-tabs.js","./src/js/select-form.js":"js/select-form.js","./src/js/tooltip.js":"js/tooltip.js","./src/js/input.js":"js/input.js","./src/js/form.js":"js/form.js","./src/js/tabs.js":"js/tabs.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -12918,7 +12930,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60077" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60369" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
