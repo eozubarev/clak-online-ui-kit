@@ -203,18 +203,18 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
+/*!
+ * Chart.js v3.4.1
+ * https://www.chartjs.org
+ * (c) 2021 Chart.js Contributors
+ * Released under the MIT License
+ */
 class Chart {
   constructor() {
     this.init();
   }
 
   init() {
-    /*!
-    * Chart.js v3.4.1
-    * https://www.chartjs.org
-    * (c) 2021 Chart.js Contributors
-    * Released under the MIT License
-    */
     !function (t, e) {
       "object" == typeof exports && "undefined" != typeof module ? module.exports = e() : "function" == typeof define && define.amd ? define(e) : (t = "undefined" != typeof globalThis ? globalThis : t || self).Chart = e();
     }(this, function () {
@@ -387,7 +387,7 @@ class Chart {
       }
 
       function f(t) {
-        return t + .5 | 0;
+        return t + 0.5 | 0;
       }
 
       const g = (t, e, i) => Math.max(Math.min(t, i), e);
@@ -425,7 +425,7 @@ class Chart {
       }
 
       function M(t, e, i) {
-        const n = v(t, 1, .5);
+        const n = v(t, 1, 0.5);
         let o;
 
         for (e + i > 1 && (o = 1 / (e + i), e *= o, i *= o), o = 0; o < 3; o++) n[o] *= 1 - e - i, n[o] += e;
@@ -441,7 +441,7 @@ class Chart {
               s = Math.min(e, i, n),
               a = (o + s) / 2;
         let r, l, c;
-        return o !== s && (c = o - s, l = a > .5 ? c / (2 - o - s) : c / (o + s), r = o === e ? (i - n) / c + (i < n ? 6 : 0) : o === i ? (n - e) / c + 2 : (e - i) / c + 4, r = 60 * r + .5), [0 | r, l || 0, a];
+        return o !== s && (c = o - s, l = a > 0.5 ? c / (2 - o - s) : c / (o + s), r = o === e ? (i - n) / c + (i < n ? 6 : 0) : o === i ? (n - e) / c + 2 : (e - i) / c + 4, r = 60 * r + 0.5), [0 | r, l || 0, a];
       }
 
       function S(t, e, i, n) {
@@ -797,11 +797,11 @@ class Chart {
             const n = i.rgb,
                   o = t.rgb;
             let s;
-            const a = e === s ? .5 : e,
+            const a = e === s ? 0.5 : e,
                   r = 2 * a - 1,
                   l = n.a - o.a,
                   c = ((r * l == -1 ? r : (r + l) / (1 + r * l)) + 1) / 2;
-            s = 1 - c, n.r = 255 & c * n.r + s * o.r + .5, n.g = 255 & c * n.g + s * o.g + .5, n.b = 255 & c * n.b + s * o.b + .5, n.a = a * n.a + (1 - a) * o.a, i.rgb = n;
+            s = 1 - c, n.r = 255 & c * n.r + s * o.r + 0.5, n.g = 255 & c * n.g + s * o.g + 0.5, n.b = 255 & c * n.b + s * o.b + 0.5, n.a = a * n.a + (1 - a) * o.a, i.rgb = n;
           }
 
           return i;
@@ -821,7 +821,7 @@ class Chart {
 
         greyscale() {
           const t = this._rgb,
-                e = f(.3 * t.r + .59 * t.g + .11 * t.b);
+                e = f(0.3 * t.r + 0.59 * t.g + 0.11 * t.b);
           return t.r = t.g = t.b = e, this;
         }
 
@@ -870,7 +870,7 @@ class Chart {
       }
 
       function N(t) {
-        return V(t) ? t : B(t).saturate(.5).darken(.1).hexString();
+        return V(t) ? t : B(t).saturate(0.5).darken(0.1).hexString();
       }
 
       function H() {}
@@ -1172,7 +1172,7 @@ class Chart {
               n = e.y - t.y,
               o = Math.sqrt(i * i + n * n);
         let s = Math.atan2(n, i);
-        return s < -.5 * bt && (s += _t), {
+        return s < -0.5 * bt && (s += _t), {
           angle: s,
           distance: o
         };
@@ -1242,7 +1242,7 @@ class Chart {
 
       function Xt(t, e, i) {
         const n = t.currentDevicePixelRatio,
-              o = 0 !== i ? Math.max(i / 2, .5) : 0;
+              o = 0 !== i ? Math.max(i / 2, 0.5) : 0;
         return Math.round((e - o) * n) / n + o;
       }
 
@@ -1269,7 +1269,7 @@ class Chart {
               break;
 
             case "rectRounded":
-              l = .516 * d, r = d - l, s = Math.cos(u + kt) * r, a = Math.sin(u + kt) * r, t.arc(i - s, n - a, l, u - bt, u - Mt), t.arc(i + a, n - s, l, u - Mt, u), t.arc(i + s, n + a, l, u, u + Mt), t.arc(i - a, n + s, l, u + Mt, u + bt), t.closePath();
+              l = 0.516 * d, r = d - l, s = Math.cos(u + kt) * r, a = Math.sin(u + kt) * r, t.arc(i - s, n - a, l, u - bt, u - Mt), t.arc(i + a, n - s, l, u - Mt, u), t.arc(i + s, n + a, l, u, u + Mt), t.arc(i - a, n + s, l, u + Mt, u + bt), t.closePath();
               break;
 
             case "rect":
@@ -1308,7 +1308,7 @@ class Chart {
       }
 
       function Gt(t, e, i) {
-        return i = i || .5, t && t.x > e.left - i && t.x < e.right + i && t.y > e.top - i && t.y < e.bottom + i;
+        return i = i || 0.5, t && t.x > e.left - i && t.x < e.right + i && t.y > e.top - i && t.y < e.bottom + i;
       }
 
       function Zt(t, e) {
@@ -2323,31 +2323,31 @@ class Chart {
         linear: t => t,
         easeInQuad: t => t * t,
         easeOutQuad: t => -t * (t - 2),
-        easeInOutQuad: t => (t /= .5) < 1 ? .5 * t * t : -.5 * (--t * (t - 2) - 1),
+        easeInOutQuad: t => (t /= 0.5) < 1 ? 0.5 * t * t : -0.5 * (--t * (t - 2) - 1),
         easeInCubic: t => t * t * t,
         easeOutCubic: t => (t -= 1) * t * t + 1,
-        easeInOutCubic: t => (t /= .5) < 1 ? .5 * t * t * t : .5 * ((t -= 2) * t * t + 2),
+        easeInOutCubic: t => (t /= 0.5) < 1 ? 0.5 * t * t * t : 0.5 * ((t -= 2) * t * t + 2),
         easeInQuart: t => t * t * t * t,
         easeOutQuart: t => -((t -= 1) * t * t * t - 1),
-        easeInOutQuart: t => (t /= .5) < 1 ? .5 * t * t * t * t : -.5 * ((t -= 2) * t * t * t - 2),
+        easeInOutQuart: t => (t /= 0.5) < 1 ? 0.5 * t * t * t * t : -0.5 * ((t -= 2) * t * t * t - 2),
         easeInQuint: t => t * t * t * t * t,
         easeOutQuint: t => (t -= 1) * t * t * t * t + 1,
-        easeInOutQuint: t => (t /= .5) < 1 ? .5 * t * t * t * t * t : .5 * ((t -= 2) * t * t * t * t + 2),
+        easeInOutQuint: t => (t /= 0.5) < 1 ? 0.5 * t * t * t * t * t : 0.5 * ((t -= 2) * t * t * t * t + 2),
         easeInSine: t => 1 - Math.cos(t * Mt),
         easeOutSine: t => Math.sin(t * Mt),
-        easeInOutSine: t => -.5 * (Math.cos(bt * t) - 1),
+        easeInOutSine: t => -0.5 * (Math.cos(bt * t) - 1),
         easeInExpo: t => 0 === t ? 0 : Math.pow(2, 10 * (t - 1)),
         easeOutExpo: t => 1 === t ? 1 : 1 - Math.pow(2, -10 * t),
-        easeInOutExpo: t => gi(t) ? t : t < .5 ? .5 * Math.pow(2, 10 * (2 * t - 1)) : .5 * (2 - Math.pow(2, -10 * (2 * t - 1))),
+        easeInOutExpo: t => gi(t) ? t : t < 0.5 ? 0.5 * Math.pow(2, 10 * (2 * t - 1)) : 0.5 * (2 - Math.pow(2, -10 * (2 * t - 1))),
         easeInCirc: t => t >= 1 ? t : -(Math.sqrt(1 - t * t) - 1),
         easeOutCirc: t => Math.sqrt(1 - (t -= 1) * t),
-        easeInOutCirc: t => (t /= .5) < 1 ? -.5 * (Math.sqrt(1 - t * t) - 1) : .5 * (Math.sqrt(1 - (t -= 2) * t) + 1),
-        easeInElastic: t => gi(t) ? t : pi(t, .075, .3),
-        easeOutElastic: t => gi(t) ? t : mi(t, .075, .3),
+        easeInOutCirc: t => (t /= 0.5) < 1 ? -0.5 * (Math.sqrt(1 - t * t) - 1) : 0.5 * (Math.sqrt(1 - (t -= 2) * t) + 1),
+        easeInElastic: t => gi(t) ? t : pi(t, 0.075, 0.3),
+        easeOutElastic: t => gi(t) ? t : mi(t, 0.075, 0.3),
 
         easeInOutElastic(t) {
-          const e = .1125;
-          return gi(t) ? t : t < .5 ? .5 * pi(2 * t, e, .45) : .5 + .5 * mi(2 * t - 1, e, .45);
+          const e = 0.1125;
+          return gi(t) ? t : t < 0.5 ? 0.5 * pi(2 * t, e, 0.45) : 0.5 + 0.5 * mi(2 * t - 1, e, 0.45);
         },
 
         easeInBack(t) {
@@ -2362,7 +2362,7 @@ class Chart {
 
         easeInOutBack(t) {
           let e = 1.70158;
-          return (t /= .5) < 1 ? t * t * ((1 + (e *= 1.525)) * t - e) * .5 : .5 * ((t -= 2) * t * ((1 + (e *= 1.525)) * t + e) + 2);
+          return (t /= 0.5) < 1 ? t * t * ((1 + (e *= 1.525)) * t - e) * 0.5 : 0.5 * ((t -= 2) * t * ((1 + (e *= 1.525)) * t + e) + 2);
         },
 
         easeInBounce: t => 1 - xi.easeOutBounce(1 - t),
@@ -2370,14 +2370,14 @@ class Chart {
         easeOutBounce(t) {
           const e = 7.5625,
                 i = 2.75;
-          return t < 1 / i ? e * t * t : t < 2 / i ? e * (t -= 1.5 / i) * t + .75 : t < 2.5 / i ? e * (t -= 2.25 / i) * t + .9375 : e * (t -= 2.625 / i) * t + .984375;
+          return t < 1 / i ? e * t * t : t < 2 / i ? e * (t -= 1.5 / i) * t + 0.75 : t < 2.5 / i ? e * (t -= 2.25 / i) * t + 0.9375 : e * (t -= 2.625 / i) * t + 0.984375;
         },
 
-        easeInOutBounce: t => t < .5 ? .5 * xi.easeInBounce(2 * t) : .5 * xi.easeOutBounce(2 * t - 1) + .5
+        easeInOutBounce: t => t < 0.5 ? 0.5 * xi.easeInBounce(2 * t) : 0.5 * xi.easeOutBounce(2 * t - 1) + 0.5
       },
             bi = "transparent",
             _i = {
-        boolean: (t, e, i) => i > .5 ? e : t,
+        boolean: (t, e, i) => i > 0.5 ? e : t,
 
         color(t, e, i) {
           const n = W(t || bi),
@@ -3710,7 +3710,7 @@ class Chart {
                 u = h.highest.height,
                 f = Ht(t.chart.width - d, 0, t.maxWidth);
 
-          a = e.offset ? t.maxWidth / n : f / (n - 1), d + 6 > a && (a = f / (n - (e.offset ? .5 : 1)), r = t.maxHeight - Yi(e.grid) - i.padding - Ui(e.title, t.chart.options.font), l = Math.sqrt(d * d + u * u), c = zt(Math.min(Math.asin(Math.min((h.highest.height + 6) / a, 1)), Math.asin(Math.min(r / l, 1)) - Math.asin(u / l))), c = Math.max(o, Math.min(s, c))), t.labelRotation = c;
+          a = e.offset ? t.maxWidth / n : f / (n - 1), d + 6 > a && (a = f / (n - (e.offset ? 0.5 : 1)), r = t.maxHeight - Yi(e.grid) - i.padding - Ui(e.title, t.chart.options.font), l = Math.sqrt(d * d + u * u), c = zt(Math.min(Math.asin(Math.min((h.highest.height + 6) / a, 1)), Math.asin(Math.min(r / l, 1)) - Math.asin(u / l))), c = Math.max(o, Math.min(s, c))), t.labelRotation = c;
         }
 
         afterCalculateLabelRotation() {
@@ -4003,7 +4003,7 @@ class Chart {
           let m, x, b, _, y, v, w, M, k, S, P, D;
 
           if ("top" === a) m = p(e.bottom), v = e.bottom - h, M = m - g, S = p(t.top) + g, D = t.bottom;else if ("bottom" === a) m = p(e.top), S = t.top, D = p(t.bottom) - g, v = m + g, M = e.top + h;else if ("left" === a) m = p(e.right), y = e.right - h, w = m - g, k = p(t.left) + g, P = t.right;else if ("right" === a) m = p(e.left), k = t.left, P = p(t.right) - g, y = m + g, w = e.left + h;else if ("x" === i) {
-            if ("center" === a) m = p((t.top + t.bottom) / 2 + .5);else if (U(a)) {
+            if ("center" === a) m = p((t.top + t.bottom) / 2 + 0.5);else if (U(a)) {
               const t = Object.keys(a)[0],
                     i = a[t];
               m = p(e.chart.scales[t].getPixelForValue(i));
@@ -4734,7 +4734,7 @@ class Chart {
       function xn(t, e, i, n) {
         return {
           x: t.x + i * (e.x - t.x),
-          y: "middle" === n ? i < .5 ? t.y : e.y : "after" === n ? i < 1 ? t.y : e.y : i > 0 ? e.y : t.y
+          y: "middle" === n ? i < 0.5 ? t.y : e.y : "after" === n ? i < 1 ? t.y : e.y : i > 0 ? e.y : t.y
         };
       }
 
@@ -6622,8 +6622,8 @@ class Chart {
       uo.id = "bar", uo.defaults = {
         datasetElementType: !1,
         dataElementType: "bar",
-        categoryPercentage: .8,
-        barPercentage: .9,
+        categoryPercentage: 0.8,
+        barPercentage: 0.9,
         grouped: !0,
         animations: {
           numbers: {
@@ -6726,7 +6726,7 @@ class Chart {
             const e = t[l],
                   i = !s && o.getParsed(l),
                   c = {},
-                  f = c[d] = s ? a.getPixelForDecimal(.5) : a.getPixelForValue(i[d]),
+                  f = c[d] = s ? a.getPixelForDecimal(0.5) : a.getPixelForValue(i[d]),
                   g = c[u] = s ? r.getBasePixel() : r.getPixelForValue(i[u]);
             c.skip = isNaN(f) || isNaN(g), h && (c.options = o.resolveDataElementOptions(l, e.active ? "active" : n), s && (c.options.radius = 0)), o.updateElement(e, l, c, n);
           }
@@ -7248,7 +7248,7 @@ class Chart {
                 c = o._cachedMeta.rScale,
                 h = c.xCenter,
                 d = c.yCenter,
-                u = c.getIndexAngle(0) - .5 * bt;
+                u = c.getIndexAngle(0) - 0.5 * bt;
           let f,
               g = u;
           const p = 360 / o.countVisibleElements();
@@ -7546,7 +7546,7 @@ class Chart {
           u = (f - (0 !== t ? f * t / (t + n) : f)) / 2;
         }
 
-        const g = (f - Math.max(.001, f * h - i / bt) / h) / 2,
+        const g = (f - Math.max(0.001, f * h - i / bt) / h) / 2,
               p = r + g + u,
               m = o - g - u,
               {
@@ -7672,7 +7672,7 @@ class Chart {
           } = e,
                 o = (i.offset || 0) / 2,
                 s = (i.spacing || 0) / 2;
-          if (e.pixelMargin = "inner" === i.borderAlign ? .33 : 0, e.fullCircles = n > _t ? Math.floor(n / _t) : 0, 0 === n || e.innerRadius < 0 || e.outerRadius < 0) return;
+          if (e.pixelMargin = "inner" === i.borderAlign ? 0.33 : 0, e.fullCircles = n > _t ? Math.floor(n / _t) : 0, 0 === n || e.innerRadius < 0 || e.outerRadius < 0) return;
           t.save();
           let a = 0;
 
@@ -8015,7 +8015,7 @@ class Chart {
         draw(t) {
           const e = this,
                 i = e.options;
-          e.skip || i.radius < .1 || (t.strokeStyle = i.borderColor, t.lineWidth = i.borderWidth, t.fillStyle = i.backgroundColor, Kt(t, i, e.x, e.y));
+          e.skip || i.radius < 0.1 || (t.strokeStyle = i.borderColor, t.lineWidth = i.borderWidth, t.fillStyle = i.backgroundColor, Kt(t, i, e.x, e.y));
         }
 
         getRange() {
@@ -8310,7 +8310,7 @@ class Chart {
                         y: v
                       } = t[p];
 
-                      for (u = f = -1, n = b; n < _; n++) f = .5 * Math.abs((y - o) * (t[n].y - v) - (y - t[n].x) * (s - v)), f > u && (u = f, d = t[n], g = n);
+                      for (u = f = -1, n = b; n < _; n++) f = 0.5 * Math.abs((y - o) * (t[n].y - v) - (y - t[n].x) * (s - v)), f > u && (u = f, d = t[n], g = n);
 
                       a[l++] = d, p = g;
                     }
@@ -9036,7 +9036,7 @@ class Chart {
                 p = g / 2;
 
           let m;
-          t.drawTitle(), a.textAlign = h.textAlign("left"), a.textBaseline = "middle", a.lineWidth = .5, a.font = d.string;
+          t.drawTitle(), a.textAlign = h.textAlign("left"), a.textBaseline = "middle", a.lineWidth = 0.5, a.font = d.string;
 
           const {
             boxWidth: x,
@@ -9299,7 +9299,7 @@ class Chart {
               c,
               h,
               d = 0;
-          return this.isHorizontal() ? (c = o(r, i, s), h = e + t, l = s - i) : ("left" === a.position ? (c = i + t, h = o(r, n, e), d = -.5 * bt) : (c = s - t, h = o(r, e, n), d = .5 * bt), l = n - e), {
+          return this.isHorizontal() ? (c = o(r, i, s), h = e + t, l = s - i) : ("left" === a.position ? (c = i + t, h = o(r, n, e), d = -0.5 * bt) : (c = s - t, h = o(r, e, n), d = 0.5 * bt), l = n - e), {
             titleX: c,
             titleY: h,
             maxWidth: l,
@@ -9958,7 +9958,7 @@ class Chart {
             x: e.x,
             y: e.y
           };
-          n = Math.abs(n) < .001 ? 0 : n;
+          n = Math.abs(n) < 0.001 ? 0 : n;
           const a = Fe(i.padding),
                 r = e.title.length || e.beforeBody.length || e.body.length || e.afterBody.length || e.footer.length;
           i.enabled && r && (t.save(), t.globalAlpha = n, e.drawBackground(s, t, o, i), yn(t, i.textDirection), s.y += a.top, e.drawTitle(s, t, i), e.drawBody(s, t, i), e.drawFooter(s, t, i), vn(t, i.textDirection), t.restore());
@@ -10228,7 +10228,7 @@ class Chart {
                 n = t.options.offset,
                 o = [];
           let s = t.getLabels();
-          s = 0 === e && i === s.length - 1 ? s : s.slice(e, i + 1), t._valueRange = Math.max(s.length - (n ? 0 : 1), 1), t._startValue = t.min - (n ? .5 : 0);
+          s = 0 === e && i === s.length - 1 ? s : s.slice(e, i + 1), t._valueRange = Math.max(s.length - (n ? 0 : 1), 1), t._startValue = t.min - (n ? 0.5 : 0);
 
           for (let t = e; t <= i; t++) o.push({
             value: t
@@ -10273,8 +10273,8 @@ class Chart {
         minRotation: n
       }) {
         const o = Et(n),
-              s = (i ? Math.sin(o) : Math.cos(o)) || .001,
-              a = .75 * e * ("" + t).length;
+              s = (i ? Math.sin(o) : Math.cos(o)) || 0.001,
+              a = 0.75 * e * ("" + t).length;
         return Math.min(e / s, a);
       }
 
@@ -10443,7 +10443,7 @@ class Chart {
                 e = t.isHorizontal(),
                 i = e ? t.width : t.height,
                 n = Et(t.options.ticks.minRotation),
-                o = (e ? Math.sin(n) : Math.cos(n)) || .001,
+                o = (e ? Math.sin(n) : Math.cos(n)) || 0.001,
                 s = t._resolveTickFontOptions(0);
 
           return Math.ceil(i / Math.min(40, s.lineHeight / o));
@@ -11143,7 +11143,7 @@ class Chart {
               o = 0,
               s = 0;
           e.options.offset && t.length && (i = e.getDecimalForValue(t[0]), o = 1 === t.length ? 1 - i : (e.getDecimalForValue(t[1]) - i) / 2, n = e.getDecimalForValue(t[t.length - 1]), s = 1 === t.length ? n : (n - e.getDecimalForValue(t[t.length - 2])) / 2);
-          const a = t.length < 3 ? .5 : .25;
+          const a = t.length < 3 ? 0.5 : 0.25;
           o = Ht(o, 0, a), s = Ht(s, 0, a), e._offsets = {
             start: o,
             end: s,
@@ -12875,7 +12875,6 @@ var _tabs = _interopRequireDefault(require("./src/js/tabs.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// import './src/js/chart.js';
 document.addEventListener('DOMContentLoaded', event => {
   new _chart.default();
   new _valveControllerTabs.default();
@@ -12934,7 +12933,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58243" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58409" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -1,5 +1,4 @@
 import './src/main.scss'
-// import './src/js/chart.js';
 
 import Chart from './src/js/chart.js';
 
@@ -18,9 +17,6 @@ import Tooltip from './src/js/tooltip.js';
 import Input from './src/js/input.js';
 import Form from './src/js/form.js';
 import Tabs from './src/js/tabs.js';
-
-
-
 
 document.addEventListener( 'DOMContentLoaded', event => {
     new Chart;
