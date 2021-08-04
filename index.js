@@ -46,8 +46,8 @@ document.addEventListener( 'DOMContentLoaded', event => {
     }
 
     if (document.getElementById('chart-resource')) {
-        let ctx = document.getElementById('chart-resource').getContext('2d');
-        let myChart = new Chart(ctx, {
+        var ctx = document.getElementById('chart-resource').getContext('2d');
+        var myChart = new Chart(ctx, {
             type: 'doughnut',
             data: {
                     labels: ['Оставшийся ресурс (%)','Весь ресурс (%)'],
