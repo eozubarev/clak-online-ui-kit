@@ -46,7 +46,7 @@ document.addEventListener( 'DOMContentLoaded', event => {
     }
 
     if (document.getElementById('chart-resource')) {
-        new ChartResource;
+        // new ChartResource;
     }
 
 });
