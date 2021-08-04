@@ -1,0 +1,10 @@
+.mobile-menu {
+    &__ul {
+    }
+    &__li {
+        text-align: center;
+        & p {
+            margin-bottom: 35px;
+        }
+    }
+}
