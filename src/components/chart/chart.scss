@@ -2,7 +2,6 @@
     &__container {
         display: flex;
         justify-content: flex-start;
-        align-items: center;
         &:first-child {
             margin-bottom: 45px;
             @media (max-width: $phone) {

@@ -22,11 +22,10 @@
                 margin: 0 auto;
                 width: 150px;
             }
-            &.second {
-                margin-bottom: 25px;
-                @media (max-width: $phoneSmall) {
-                    margin-bottom: 0;
-                }
+
+            margin-bottom: 25px;
+            @media (max-width: $phoneSmall) {
+                margin-bottom: 0;
             }
         }
         &-tab {

@@ -3,6 +3,6 @@
         .chart__left 
             h2.chart__title Расход воды, л/мин
             canvas(id="chart-warer-flow")
-        .chart__right.--resource
-            //- h2.chart__title Оставшийся ресурс
-            canvas(id="chart-resource")
+        .chart__right
+            h2.chart__title Оставшийся ресурс
+            include /components/circle-chart/circle-chart

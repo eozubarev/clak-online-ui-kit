@@ -1,0 +1,79 @@
+$light-grey: #edf2f4;
+$grey: #ebeef3;
+$primary: #07a0da;
+
+.circle-chart {
+    &__info {
+        color: #929aa5;
+        margin-right: 60px;
+        position: relative;
+        & p {
+            &:first-child {
+                &::after {
+                    top: 5px;
+                    background-color: $primary;
+                }
+            }
+            &::after {
+                top: 57px;
+                left: 100px;
+                position: absolute;
+                content: "";
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                background-color: $grey;
+            }
+        }
+    }
+    &__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .chart-container {
+            $stroke-width: 10;
+
+            .back {
+                stroke: $grey;
+                stroke-width: $stroke-width;
+            }
+
+            .front {
+                stroke: $primary;
+                stroke-width: $stroke-width;
+                stroke-linecap: round;
+                // 565.49 is the diameter of the circle (2 * PI * radius) Ideally, you should calculate it in code instead of hardcoding. 395.84 is 565.49 * 0.7
+                stroke-dasharray: 395.84;
+                // Without transform and transform origin, the stroke won't start in the top
+                transform: rotate(-90deg);
+                transform-origin: center;
+                animation: fill 2s reverse;
+            }
+
+            .text {
+                font-weight: 300;
+                font-size: 32px;
+                // darken is a SCSS convenient function to make a color darker
+                fill: darken($primary, 5%);
+                opacity: 0;
+                transform: translateY(30%);
+                animation: display 2s forwards;
+            }
+
+            @keyframes fill {
+                // 1000000 is just a really big number to make sure there will be no "dash" inside the stroke
+                to {
+                    stroke-dasharray: 0, 1000000;
+                }
+            }
+
+            @keyframes display {
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        }
+    }
+}
