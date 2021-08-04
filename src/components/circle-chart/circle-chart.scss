@@ -7,6 +7,19 @@ $primary: #07a0da;
         color: #929aa5;
         margin-right: 60px;
         position: relative;
+        @media (max-width: $phone) {
+            margin-right: 0px;
+            margin-bottom: 25px;
+        }
+        @media (max-width: $phoneSmall) {
+            margin-bottom: 0px;
+            & p {
+                margin: 0px;
+                &:first-child {
+                    padding-bottom: 15px;
+                }
+            }
+        }
         & p {
             &:first-child {
                 &::after {
@@ -23,6 +36,9 @@ $primary: #07a0da;
                 height: 12px;
                 border-radius: 50%;
                 background-color: $grey;
+                @media (max-width: $phoneSmall) {
+                    top: 42px;
+                }
             }
         }
     }
@@ -30,13 +46,18 @@ $primary: #07a0da;
         display: flex;
         justify-content: center;
         align-items: center;
-
+        @media (max-width: $phone) {
+            flex-direction: column;
+        }
         .chart-container {
             $stroke-width: 10;
 
             .back {
                 stroke: $grey;
                 stroke-width: $stroke-width;
+                @media (max-width: $phoneSmall) {
+                    r: 60px;
+                }
             }
 
             .front {
@@ -49,6 +70,10 @@ $primary: #07a0da;
                 transform: rotate(-90deg);
                 transform-origin: center;
                 animation: fill 2s reverse;
+                @media (max-width: $phoneSmall) {
+                    r: 60px;
+                    stroke-dasharray: 250.84;
+                }
             }
 
             .text {
@@ -59,6 +84,9 @@ $primary: #07a0da;
                 opacity: 0;
                 transform: translateY(30%);
                 animation: display 2s forwards;
+                @media (max-width: $phoneSmall) {
+                    font-size: 23px;
+                }
             }
 
             @keyframes fill {

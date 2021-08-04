@@ -257,6 +257,23 @@ button:active {
   margin-right: 60px;
   position: relative;
 }
+@media (max-width: 479px) {
+  .circle-chart__info {
+    margin-right: 0px;
+    margin-bottom: 25px;
+  }
+}
+@media (max-width: 400px) {
+  .circle-chart__info {
+    margin-bottom: 0px;
+  }
+  .circle-chart__info p {
+    margin: 0px;
+  }
+  .circle-chart__info p:first-child {
+    padding-bottom: 15px;
+  }
+}
 .circle-chart__info p:first-child::after {
   top: 5px;
   background-color: #07a0da;
@@ -271,14 +288,29 @@ button:active {
   border-radius: 50%;
   background-color: #ebeef3;
 }
+@media (max-width: 400px) {
+  .circle-chart__info p::after {
+    top: 42px;
+  }
+}
 .circle-chart__container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 479px) {
+  .circle-chart__container {
+    flex-direction: column;
+  }
+}
 .circle-chart__container .chart-container .back {
   stroke: #ebeef3;
   stroke-width: 10;
+}
+@media (max-width: 400px) {
+  .circle-chart__container .chart-container .back {
+    r: 60px;
+  }
 }
 .circle-chart__container .chart-container .front {
   stroke: #07a0da;
@@ -289,6 +321,12 @@ button:active {
   transform-origin: center;
   animation: fill 2s reverse;
 }
+@media (max-width: 400px) {
+  .circle-chart__container .chart-container .front {
+    r: 60px;
+    stroke-dasharray: 250.84;
+  }
+}
 .circle-chart__container .chart-container .text {
   font-weight: 300;
   font-size: 32px;
@@ -296,6 +334,11 @@ button:active {
   opacity: 0;
   transform: translateY(30%);
   animation: display 2s forwards;
+}
+@media (max-width: 400px) {
+  .circle-chart__container .chart-container .text {
+    font-size: 23px;
+  }
 }
 @keyframes fill {
   to {
@@ -1434,7 +1477,7 @@ button:active {
     margin-bottom: 0px;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 900px) {
   .chart__container {
     flex-direction: column;
   }
@@ -1442,7 +1485,7 @@ button:active {
 .chart__left {
   width: 47%;
 }
-@media (max-width: 767px) {
+@media (max-width: 900px) {
   .chart__left {
     width: 100%;
     margin-bottom: 30px;
@@ -1451,7 +1494,7 @@ button:active {
 .chart__right {
   width: 47%;
 }
-@media (max-width: 767px) {
+@media (max-width: 900px) {
   .chart__right {
     width: 100%;
   }
@@ -1460,7 +1503,7 @@ button:active {
   width: 33%;
   margin: 35px 0px 0px 70px;
 }
-@media (max-width: 767px) {
+@media (max-width: 900px) {
   .chart__right.--resource {
     width: 55%;
     margin: 0;
@@ -1476,7 +1519,7 @@ button:active {
   font-weight: 300;
   margin-bottom: 25px;
 }
-@media (max-width: 767px) {
+@media (max-width: 900px) {
   .chart__title {
     font-size: 18px;
     text-align: center;
@@ -2631,7 +2674,7 @@ button:active {
 .interval__nav-tab {
     padding: 10px 5px 10px 5px;
     width: 100%;
-    font-size: 12px;
+    font-size: 11px;
   }
 }
 @media (max-width: 400px) {
