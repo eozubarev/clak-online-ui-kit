@@ -46,22 +46,41 @@ document.addEventListener( 'DOMContentLoaded', event => {
     }
 
     if (document.getElementById('chart-resource')) {
-        new Chart(document.getElementById("chart-resource"), {
+        let ctx = document.getElementById('chart-resource').getContext('2d');
+        let myChart = new Chart(ctx, {
             type: 'doughnut',
             data: {
-                labels: ['Оставшийся ресурс (%)','Весь ресурс (%)'],
-                datasets: [{
-                    tension: 0.3,
-                    label: 'Оставшийся ресурс',
-                    data: [20, 80],
-                    backgroundColor: [
-                        '#1C8EC3',
-                        '#EBECF0'
-                    ],
-                    hoverOffset: 4,
-                }]
-            },
+                    labels: ['Оставшийся ресурс (%)','Весь ресурс (%)'],
+                    datasets: [{
+                        tension: 0.3,
+                        label: 'Оставшийся ресурс',
+                        data: [20, 80],
+                        backgroundColor: [
+                            '#1C8EC3',
+                            '#EBECF0'
+                        ],
+                        hoverOffset: 4,
+                    }]
+                }
         });
+
+
+        // new Chart(document.getElementById("chart-resource"), {
+        //     type: 'doughnut',
+        //     data: {
+        //         labels: ['Оставшийся ресурс (%)','Весь ресурс (%)'],
+        //         datasets: [{
+        //             tension: 0.3,
+        //             label: 'Оставшийся ресурс',
+        //             data: [20, 80],
+        //             backgroundColor: [
+        //                 '#1C8EC3',
+        //                 '#EBECF0'
+        //             ],
+        //             hoverOffset: 4,
+        //         }]
+        //     },
+        // });
     }
 
 });
