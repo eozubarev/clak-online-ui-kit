@@ -2735,8 +2735,10 @@ button:active {
 }
 @media (max-width: 767px) {
   .filter-tabs__nav-tabs {
+    display: flex;
+    align-items: center;
     overflow-x: scroll;
-    height: 50px;
+    height: 55px;
   }
 }
 .filter-tabs__nav-tabs::after {

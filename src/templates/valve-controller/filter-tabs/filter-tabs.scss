@@ -13,8 +13,10 @@
     &__nav-tabs {
         position: relative;
         @media (max-width: $tablet) {
+            display: flex;
+            align-items: center;
             overflow-x: scroll;
-            height: 50px;
+            height: 55px;
         }
         &::after {
             position: absolute;
