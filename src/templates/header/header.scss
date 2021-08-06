@@ -6,7 +6,7 @@
         @media (max-width: $tablet) {
             position: fixed;
             width: 100%;
-            z-index: 90;
+            z-index: 10;
             box-shadow: $shadow;
             & .header__container {
                 padding: 10px 20px 10px 20px;
