@@ -9,15 +9,15 @@
                 include ./valves/valves
 
             //- Здесь лежит вложенность таба "Пользователи"
-            //- .tab-pane.users(data-tab-content='users')
-            //-     include ./users/users
+            .tab-pane.users(data-tab-content='users')
+                include ./users/users
 
             //- Здесь лежит личный кабинет пользователя + настройка и инфа по клапану
-            .tab-pane.users.client-profile__tab(data-tab-content='users')
-                include ../client-profile/client-profile
+            //- .tab-pane.users.client-profile__tab(data-tab-content='users')
+            //-     include ../client-profile/client-profile
             
             //- Здесь лежит контроллер для клапана
-            h2.valve-controller__title Система очистки воды
-            .tab-pane.active.users.valve-controller__tab(data-tab-content='users')
-                include ../valve-controller/valve-controller
+            //- h2.valve-controller__title Система очистки воды
+            //- .tab-pane.active.users.valve-controller__tab(data-tab-content='users')
+            //-     include ../valve-controller/valve-controller
             
