@@ -29,6 +29,7 @@
         margin: 0px 0 40px;
         @media (max-width: $tabletWide) {
             flex-direction: column;
+            margin-top: 30px;
         }
     }
     &__warning {

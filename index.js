@@ -12,6 +12,7 @@ import ValvesTabs from './src/js/valves-tabs.js';
 import FilterTabs from './src/js/filter-tabs.js';
 import SelectForm from './src/js/select-form.js';
 import Tooltip from './src/js/tooltip.js';
+import Header from './src/js/header.js';
 import Popup from './src/js/popup.js';
 import Input from './src/js/input.js';
 import Form from './src/js/form.js';
@@ -27,6 +28,7 @@ document.addEventListener( 'DOMContentLoaded', event => {
     new SelectForm;
     new FilterTabs;
     new Tooltip;
+    new Header;
     new Popup;
     new Input;
     new Form;

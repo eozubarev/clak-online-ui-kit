@@ -2094,12 +2094,26 @@ button:active {
 
 .header {
   background-color: #fff;
+  transition: 0.3s ease;
+}
+.header.--scrolled {
+  position: fixed;
+  width: 100%;
+  z-index: 90;
+  box-shadow: 0px 10px 20px 0px rgba(63, 126, 202, 0.15);
+}
+.header.--scrolled .header__container {
+  padding: 10px 20px 10px 20px;
+}
+.header.--scrolled .header__start-tel {
+  font-size: 17px;
 }
 .header__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 25px 20px 25px 20px;
+  transition: 0.3s ease;
 }
 .header__logo {
   max-width: 90px;
@@ -3092,6 +3106,7 @@ button:active {
 @media (max-width: 900px) {
   .configuration-pagination__container {
     flex-direction: column;
+    margin-top: 30px;
   }
 }
 .configuration-pagination__warning {

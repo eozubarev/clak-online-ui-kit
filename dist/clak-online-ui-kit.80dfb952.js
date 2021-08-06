@@ -11889,6 +11889,39 @@ class Tooltip {
 }
 
 exports.default = Tooltip;
+},{}],"js/header.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+class Header {
+  constructor() {
+    this.header = document.querySelector('header.header');
+    this.headerScrollClass = '--scrolled';
+    this.listeners();
+  }
+
+  listeners() {
+    window.addEventListener('scroll', event => {
+      let scroll = window.pageYOffset;
+      this.checkScroll(scroll);
+    });
+  }
+
+  checkScroll(scroll) {
+    if (scroll > 0) {
+      this.header.classList.add(this.headerScrollClass);
+    } else {
+      this.header.classList.remove(this.headerScrollClass);
+    }
+  }
+
+}
+
+exports.default = Header;
 },{}],"js/popup.js":[function(require,module,exports) {
 "use strict";
 
@@ -12944,6 +12977,8 @@ var _selectForm = _interopRequireDefault(require("./src/js/select-form.js"));
 
 var _tooltip = _interopRequireDefault(require("./src/js/tooltip.js"));
 
+var _header = _interopRequireDefault(require("./src/js/header.js"));
+
 var _popup = _interopRequireDefault(require("./src/js/popup.js"));
 
 var _input = _interopRequireDefault(require("./src/js/input.js"));
@@ -12964,6 +12999,7 @@ document.addEventListener('DOMContentLoaded', event => {
   new _selectForm.default();
   new _filterTabs.default();
   new _tooltip.default();
+  new _header.default();
   new _popup.default();
   new _input.default();
   new _form.default();
@@ -12981,7 +13017,7 @@ document.addEventListener('DOMContentLoaded', event => {
     new _chartWaterflowMetr.default();
   }
 });
-},{"./src/main.scss":"main.scss","./src/js/chart.js":"js/chart.js","./src/js/valve-controller-tabs.js":"js/valve-controller-tabs.js","./src/js/customization-tabs.js":"js/customization-tabs.js","./src/js/statistics-tabs.js":"js/statistics-tabs.js","./src/js/chart-waterflow-metr.js":"js/chart-waterflow-metr.js","./src/js/chart-water-flow.js":"js/chart-water-flow.js","./src/js/chart-reagent.js":"js/chart-reagent.js","./src/js/interval-tabs.js":"js/interval-tabs.js","./src/js/valves-tabs.js":"js/valves-tabs.js","./src/js/filter-tabs.js":"js/filter-tabs.js","./src/js/select-form.js":"js/select-form.js","./src/js/tooltip.js":"js/tooltip.js","./src/js/popup.js":"js/popup.js","./src/js/input.js":"js/input.js","./src/js/form.js":"js/form.js","./src/js/tabs.js":"js/tabs.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./src/main.scss":"main.scss","./src/js/chart.js":"js/chart.js","./src/js/valve-controller-tabs.js":"js/valve-controller-tabs.js","./src/js/customization-tabs.js":"js/customization-tabs.js","./src/js/statistics-tabs.js":"js/statistics-tabs.js","./src/js/chart-waterflow-metr.js":"js/chart-waterflow-metr.js","./src/js/chart-water-flow.js":"js/chart-water-flow.js","./src/js/chart-reagent.js":"js/chart-reagent.js","./src/js/interval-tabs.js":"js/interval-tabs.js","./src/js/valves-tabs.js":"js/valves-tabs.js","./src/js/filter-tabs.js":"js/filter-tabs.js","./src/js/select-form.js":"js/select-form.js","./src/js/tooltip.js":"js/tooltip.js","./src/js/header.js":"js/header.js","./src/js/popup.js":"js/popup.js","./src/js/input.js":"js/input.js","./src/js/form.js":"js/form.js","./src/js/tabs.js":"js/tabs.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -13009,7 +13045,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64260" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59352" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

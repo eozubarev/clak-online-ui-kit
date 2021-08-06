@@ -1,28 +1,44 @@
 .header {
     background-color: $white;
+    transition: $transition;
+
+    &.--scrolled {
+        position: fixed;
+        width: 100%;
+        z-index: 90;
+        box-shadow: $shadow;
+        & .header__container {
+            padding: 10px 20px 10px 20px;
+        }
+        & .header__start-tel {
+            font-size: 17px;
+        }
+    }
+
     &__container {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 25px 20px 25px 20px;
+        transition: $transition;
     }
     &__logo {
         max-width: 90px;
-        @media(max-width: $tablet) {
+        @media (max-width: $tablet) {
             display: none;
         }
         &-text {
-            font-family: 'SebastianBold';
+            font-family: "SebastianBold";
             font-size: 25px;
             color: #474e5b;
-            @media(max-width: $tablet) {
+            @media (max-width: $tablet) {
                 display: none;
             }
         }
         &-line {
             margin: 0px 20px 0px 20px;
             fill: #474e5b;
-            @media(max-width: $tabletWide) {
+            @media (max-width: $tabletWide) {
                 display: none;
             }
         }
@@ -49,7 +65,7 @@
         &-info {
             font-size: 13px;
             color: #474e5b;
-            @media(max-width: $tabletWide) {
+            @media (max-width: $tabletWide) {
                 display: none;
             }
         }
@@ -57,7 +73,7 @@
     &__end {
         display: flex;
         align-items: center;
-        @media(max-width: $tablet) {
+        @media (max-width: $tablet) {
             display: none;
         }
         &-id {
