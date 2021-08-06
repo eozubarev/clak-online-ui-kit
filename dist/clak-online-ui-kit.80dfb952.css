@@ -36,13 +36,6 @@
   font-style: normal;
 }
 
-.form__label.--cities .form__button-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 *,
 *::before,
 *::after {
@@ -171,14 +164,26 @@ button:active {
 }
 
 .customization__select {
-  width: 90%;
+  margin-right: 40px;
+  height: 85px;
+  flex-grow: 0;
+  max-width: 45%;
+  flex-basis: 50%;
+}
+@media (max-width: 1600px) {
+  .customization__select {
+    max-width: 40%;
+    margin-right: 60px;
+  }
 }
 @media (max-width: 767px) {
   .customization__select {
-    width: 100%;
+    max-width: 100%;
+    margin-right: 0;
   }
 }
 .customization__select-container {
+  height: 85px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -193,16 +198,27 @@ button:active {
 }
 
 .customization__info-input {
-  width: 90%;
+  margin-right: 40px;
+  height: 85px;
+  flex-grow: 0;
+  max-width: 45%;
+  flex-basis: 50%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 20px 0 20px;
   border-bottom: 1px solid #e0e0e7;
 }
+@media (max-width: 1600px) {
+  .customization__info-input {
+    max-width: 40%;
+    margin-right: 60px;
+  }
+}
 @media (max-width: 767px) {
   .customization__info-input {
-    width: 100%;
+    max-width: 100%;
+    margin-right: 0;
   }
 }
 .customization__info-input__item {
@@ -1775,86 +1791,6 @@ button:active {
 .form__label + .form__select {
   margin-top: 18px;
 }
-.form__label.--warn .form__warn {
-  opacity: 1;
-  transform: translate3d(0, 100%, 0);
-}
-.form__label.--value, .form__label.--focused {
-  z-index: 1;
-  border-color: #b6c6d4;
-  background-color: transparent;
-}
-.form__label.--value .form__placeholder, .form__label.--focused .form__placeholder {
-  opacity: 0;
-  pointer-events: none;
-}
-.form__label.--value.--phone .form__input, .form__label.--focused.--phone .form__input {
-  opacity: 1;
-}
-.form__label.--value.--search, .form__label.--focused.--search {
-  background-color: #fff;
-}
-.form__label.--error {
-  border-color: #ff0000;
-}
-.form__label.--phone .form__input {
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-.form__label.--search {
-  border-right: unset;
-  border-top-right-radius: unset;
-  border-bottom-right-radius: unset;
-  border-top: 1px solid transparent;
-  border-left: 1px solid transparent;
-  border-bottom: 1px solid transparent;
-  background-color: transparent;
-}
-.form__label.--search .form__input {
-  height: 34px;
-  padding: 12px 142px 12px 20px;
-}
-@media (max-width: 767px) {
-  .form__label.--search .form__input {
-    padding-right: 120px;
-  }
-}
-.form__label.--search .form__placeholder {
-  top: 5px;
-}
-.form__label.--cities {
-  display: flex;
-}
-.form__label.--cities [name=search] {
-  border: 1px solid #f2f4f7;
-}
-.form__label.--cities .form__search {
-  height: 38px;
-  padding-right: 115px;
-  border: 1px solid #f2f4f7;
-}
-.form__label.--cities .form__placeholder {
-  top: 5px;
-}
-.form__label.--cities .form__label-close {
-  right: 77px;
-}
-.form__label.--cities .form__button {
-  cursor: pointer;
-  position: relative;
-  width: 60px;
-  min-width: 60px;
-  padding: 0;
-  border-top: 1px solid #f2f4f7;
-  border-right: 1px solid #f2f4f7;
-  border-bottom: 1px solid #f2f4f7;
-}
-.form__label.--cities .form__button:hover .form__button-icon {
-  fill: #ff8910;
-}
-.form__label.--cities .form__button-icon {
-  transition: fill 0.3s ease;
-}
 .form__label-close {
   position: absolute;
   top: 50%;
@@ -2032,8 +1968,10 @@ button:active {
   transform: none;
   pointer-events: unset;
   max-width: 375px;
-  border-radius: 0px 0px 7px 6px;
   max-height: 247px;
+  border-radius: 0px 0px 7px 6px;
+  overflow: hidden;
+  overflow: scroll;
 }
 .form__select.--selected {
   border-color: #b6c6d4;
@@ -2051,6 +1989,8 @@ button:active {
 .form__select-head {
   display: block;
   position: relative;
+  overflow: hidden;
+  white-space: nowrap;
   text-align: center;
   width: 110px;
   max-width: 100%;
@@ -2080,15 +2020,15 @@ button:active {
 .form__select-head::before {
   content: "";
   display: block;
-  width: 22px;
-  height: 14px;
+  width: 35px;
+  height: 22px;
   position: absolute;
-  background-color: white;
-  top: 36%;
-  right: 1px;
+  top: 31%;
+  right: 0px;
+  background: linear-gradient(90deg, rgba(0, 165, 233, 0) 13%, white 46%);
 }
 .form__select-list {
-  position: absolute;
+  opacity: 0;
   width: 100%;
   max-width: 100%;
   font-size: 14px;
@@ -2097,10 +2037,9 @@ button:active {
   border: 1px solid #f2f4f7;
   border-radius: 2px;
   background-color: #fff;
-  opacity: 0;
+  box-shadow: 0px 10px 20px 0px rgba(63, 126, 202, 0.15);
   transform: translate3d(0, 20px, 0);
   transition: transform 0.3s ease, opacity 0.3s ease;
-  box-shadow: 0px 10px 20px 0px rgba(63, 126, 202, 0.15);
   will-change: opacity, transform;
   pointer-events: none;
   cursor: pointer;
@@ -2109,6 +2048,7 @@ button:active {
   overflow-y: scroll;
 }
 .form__select-item {
+  word-wrap: inherit;
   margin-top: 0px !important;
   padding: 12px;
   text-align: center;
@@ -2429,11 +2369,13 @@ button:active {
   width: 155px;
 }
 .installer-setup__columns {
-  column-count: 2;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
 }
 @media (max-width: 767px) {
   .installer-setup__columns {
-    column-count: 1;
+    flex-direction: column;
   }
 }
 .installer-setup__nav-tabs {
@@ -2520,11 +2462,15 @@ button:active {
   margin: 30px 0 25px;
 }
 .system-setup__container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
   column-count: 2;
 }
 @media (max-width: 767px) {
   .system-setup__container {
-    column-count: 1;
+    flex-direction: column;
   }
 }
 .system-setup__btn {
@@ -2792,6 +2738,9 @@ button:active {
 .filter-tabs__nav-tab:hover {
   color: #2a2a2a;
 }
+.filter-tabs__nav-tab:hover::after {
+  opacity: 1;
+}
 .filter-tabs__tab-pane {
   width: 100%;
   display: none;
@@ -2998,11 +2947,13 @@ button:active {
 }
 
 .customization__info-container {
-  column-count: 2;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
 }
 @media (max-width: 767px) {
   .customization__info-container {
-    column-count: 1;
+    flex-direction: column;
   }
 }
 

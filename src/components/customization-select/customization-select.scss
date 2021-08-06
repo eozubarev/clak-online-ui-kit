@@ -1,9 +1,20 @@
 .customization__select {
-    width: 90%;
-    @media (max-width: $tablet) {
-        width: 100%;
+    margin-right: 40px;
+    height: 85px;
+    flex-grow: 0;
+    max-width: 45%;
+    flex-basis: 50%;
+    @media (max-width: $desktop) {
+        max-width: 40%;
+        margin-right: 60px;
     }
+    @media (max-width: $tablet) {
+        max-width: 100%;
+        margin-right: 0;
+    }
+
     &-container {
+        height: 85px;
         display: flex;
         align-items: center;
         justify-content: space-between;

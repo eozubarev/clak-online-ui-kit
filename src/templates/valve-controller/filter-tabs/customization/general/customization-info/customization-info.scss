@@ -1,8 +1,10 @@
 .customization__info {
     &-container {
-        column-count: 2;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
         @media (max-width: $tablet) {
-            column-count: 1;
+            flex-direction: column;
         }
     }
 }

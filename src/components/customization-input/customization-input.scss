@@ -1,16 +1,26 @@
 .customization__info {
     &-input {
-        width: 90%;
+        margin-right: 40px;
+        height: 85px;
+        flex-grow: 0;
+        max-width: 45%;
+        flex-basis: 50%;
+
+        @media (max-width: $desktop) {
+            max-width: 40%;
+            margin-right: 60px;
+        }
+        @media (max-width: $tablet) {
+            max-width: 100%;
+            margin-right: 0;
+        }
+
         display: flex;
         align-items: center;
         justify-content: space-between;
 
         padding: 20px 0 20px;
         border-bottom: 1px solid #e0e0e7;
-
-        @media (max-width: $tablet) {
-            width: 100%;
-        }
 
         &__item {
             font-size: 15px;
