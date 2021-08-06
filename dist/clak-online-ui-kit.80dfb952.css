@@ -2096,17 +2096,19 @@ button:active {
   background-color: #fff;
   transition: 0.3s ease;
 }
-.header.--scrolled {
-  position: fixed;
-  width: 100%;
-  z-index: 90;
-  box-shadow: 0px 10px 20px 0px rgba(63, 126, 202, 0.15);
-}
-.header.--scrolled .header__container {
-  padding: 10px 20px 10px 20px;
-}
-.header.--scrolled .header__start-tel {
-  font-size: 17px;
+@media (max-width: 767px) {
+  .header.--scrolled {
+    position: fixed;
+    width: 100%;
+    z-index: 90;
+    box-shadow: 0px 10px 20px 0px rgba(63, 126, 202, 0.15);
+  }
+  .header.--scrolled .header__container {
+    padding: 10px 20px 10px 20px;
+  }
+  .header.--scrolled .header__start-tel {
+    font-size: 17px;
+  }
 }
 .header__container {
   display: flex;
